@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content= "#ffffff">
+  <!--[if IE]><meta http-equiv="cleartype" content="on" /><![endif]-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" media="screen" href="./build/main.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <link rel="shortcut icon" type="image/ico" href="./build/images/favicons/favicon.png" />
+  <link rel="apple-touch-icon" href="./build/images/favicons/apple-touch-icon.png" />
+  <link rel="icon" href="./build/images/favicons/android-favicon.png">
+
+</head>
+
+<body class="page-loading">
+  <a class="sr-only" href="#content">skip to content</a>
+  <main id="content" class="main page-content" aria-label="Content">
+
+    <header class="view-header">
+      <div class="view-header__left">
+        <a href="/">
+          <i class="ri-menu-line"></i>
+        </a>
+      </div>
+
+      <div class="view-header__featured">
+        <a class="site-logo" href="">
+          <img src="/build/images/Ajua-logo.svg" />
+          <h2 class="sr-only">Ajua</h2>
+        </a>
+      </div>
+
+      <div class="view-header__right">
+        <search-trigger class="js-search">
+          <i class="ri-search-2-line"></i>
+        </search-trigger>
+      </div>
+
+    </header>
+
+    <div class="slider slider--cats">
+      <a class="cat-pill" href="">Restaurants</a>
+      <a class="cat-pill" href="">Hotels</a>
+      <a class="cat-pill" href="">Beauty Care</a>
+      <a class="cat-pill" href="">Retail</a>
+      <a class="cat-pill" href="">Banking</a>
+    </div>
+
+    <div class="banner">
+      <div class="banner__content">
+        <div class="wrapper">
+          <h1 class="h1">Find Nigeria’s best local businesses</h1>
+          <form class="lone-search">
+            <i class="ri-search-2-line"></i>
+            <input type="text" placeholder="What are you looking for?" value="" />
+          </form>
+        </div>
+      </div>
+      <figure class="banner__img">
+        <img src="https://placeimg.com/1480/680/people" />
+      </figure>
+    </div>
+
+    <div class="py-4 py-md-6 wrapper">
+      <h3 class="h6">Top Rated businesses</h3>
+
+      <business-list class="slider slider--business">
+
+        <business-preview>
+          <figure class="business-preview__featured-image">
+            <img src="https://placeimg.com/480/480/tech" />
+          </figure>
+
+          <div class="business-preview__content">
+            <h4>Mchana Coffee Shop</h4>
+
+            <rating-preview>
+              <i class="ri-star-fill"></i>
+              <span>4.9</span>
+              <a href="#reviews">100 reviews</a>
+            </rating-preview>
+
+            <business-category>
+              <span>[business category]</span>
+            </business-category>
+
+            <address>
+              18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
+            </address>
+
+          </div>
+        </business-preview>
+
+        <business-preview>
+          <figure class="business-preview__featured-image">
+            <img src="https://placeimg.com/480/482/any" />
+          </figure>
+
+          <div class="business-preview__content">
+            <h4>Good Eats Cafe</h4>
+
+            <rating-preview>
+              <i class="ri-star-fill"></i>
+              <span>4.3</span>
+              <a href="#reviews">24 reviews</a>
+            </rating-preview>
+
+            <business-category>
+              <span>[business category]</span>
+            </business-category>
+
+            <address>
+              18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
+            </address>
+
+          </div>
+        </business-preview>
+
+        <business-preview>
+          <figure class="business-preview__featured-image">
+            <img src="https://placeimg.com/480/481/any" />
+          </figure>
+
+          <div class="business-preview__content">
+            <h4>Good Eats Cafe</h4>
+
+            <rating-preview>
+              <i class="ri-star-fill"></i>
+              <span>4.3</span>
+              <a href="#reviews">24 reviews</a>
+            </rating-preview>
+
+            <business-category>
+              <span>[business category]</span>
+            </business-category>
+
+            <address>
+              18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
+            </address>
+
+          </div>
+        </business-preview>
+
+        <business-preview>
+          <figure class="business-preview__featured-image">
+            <img src="https://placeimg.com/480/482/any" />
+          </figure>
+
+          <div class="business-preview__content">
+            <h4>Good Eats Cafe</h4>
+
+            <rating-preview>
+              <i class="ri-star-fill"></i>
+              <span>4.3</span>
+              <a href="#reviews">24 reviews</a>
+            </rating-preview>
+
+            <business-category>
+              <span>[business category]</span>
+            </business-category>
+
+            <address>
+              18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
+            </address>
+
+          </div>
+        </business-preview>
+
+        <business-preview>
+          <figure class="business-preview__featured-image">
+            <img src="https://placeimg.com/484/480/any" />
+          </figure>
+
+          <div class="business-preview__content">
+            <h4>Good Eats Cafe</h4>
+
+            <rating-preview>
+              <i class="ri-star-fill"></i>
+              <span>4.3</span>
+              <a href="#reviews">24 reviews</a>
+            </rating-preview>
+
+            <business-category>
+              <span>[business category]</span>
+            </business-category>
+
+            <address>
+              18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
+            </address>
+
+          </div>
+        </business-preview>
+
+
+        <business-preview>
+          <figure class="business-preview__featured-image">
+            <img src="https://placeimg.com/486/480/any" />
+          </figure>
+
+          <div class="business-preview__content">
+            <h4>Good Eats Cafe</h4>
+
+            <rating-preview>
+              <i class="ri-star-fill"></i>
+              <span>4.3</span>
+              <a href="#reviews">24 reviews</a>
+            </rating-preview>
+
+            <business-category>
+              <span>[business category]</span>
+            </business-category>
+
+            <address>
+              18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
+            </address>
+
+          </div>
+        </business-preview>
+
+        <business-preview>
+          <figure class="business-preview__featured-image">
+            <img src="https://placeimg.com/470/470/any" />
+          </figure>
+
+          <div class="business-preview__content">
+            <h4>Good Eats Cafe</h4>
+
+            <rating-preview>
+              <i class="ri-star-fill"></i>
+              <span>4.3</span>
+              <a href="#reviews">24 reviews</a>
+            </rating-preview>
+
+            <business-category>
+              <span>[business category]</span>
+            </business-category>
+
+            <address>
+              18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
+            </address>
+
+          </div>
+        </business-preview>
+
+      </business-list>
+
+    </div>
+
+    <div class="wrapper py-6">
+      <h3 class="h6">About Ajua</h3>
+      <p>Ajua is Africa’s largest network of trusted local businesses. We believe in the power of community and connection.</p>
+
+      <div class="d-flex mt-4">
+        <div class="col-4 pr-2">
+          <figure class="img-square mb-2">
+            <img src="./build/images/marketing/local-business.png" />
+          </figure>
+          <p class="font-weight-500">Find local businesses</p>
+        </div>
+        <div class="col-4 px-1">
+          <figure class="img-square mb-2">
+            <img src="./build/images/marketing/reviews.png" />
+          </figure>
+          <p class="font-weight-500">Read and leave reviews</p>
+        </div>
+        <div class="col-4 pl-2">
+          <figure class="img-square mb-2">
+            <img src="./build/images/marketing/whatsapp.svg" />
+          </figure>
+          <p class="font-weight-500">Engage on WhatsApp</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <a  class="site-footer-icon" href="">
+        <img src="./build/images/Ajua-icon.svg" alt="Ajua Icon" />
+      </a>
+
+      <ul class="social-list">
+        <li>
+          <a href="" target="_blank">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+        </li>
+        <li>
+          <a href="" target="_blank">
+            <i class="ri-instagram-fill"></i>
+          </a>
+        </li>
+        <li>
+          <a href="" target="_blank">
+            <i class="ri-whatsapp-fill"></i>
+          </a>
+        </li>
+        <li>
+          <a href="" target="_blank">
+            <i class="ri-twitter-fill"></i>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="legal-list">
+        <li>
+          <small>© 2022 Ajua, Inc.</small>
+        </li>
+        <li>
+          <a href="">
+            Terms
+          </a>
+        </li>
+        <li>
+          <a href="" target="_blank">
+            Privacy
+          </a>
+        </li>
+        <li>
+          <a href="" target="_blank">
+            Cookies
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <site-search>
+    <header class="view-header">
+      <div class="view-header__left">
+        <a href="/">
+          <i class="ri-arrow-left-s-line"></i>
+        </a>
+      </div>
+
+      <div class="view-header__featured">
+        <input type="text" id="site-search-input" placeholder="Start typing"/>
+      </div>
+
+      <div class="view-header__right">
+        <search-trigger class="js-search">
+          <i class="ri-search-2-line"></i>
+        </search-trigger>
+      </div>
+    </header>
+
+    <search-results>
+      <search-result>
+        <figure>
+          <img src="https://placeimg.com/480/480/tech" />
+        </figure>
+        <p>[ Search result name ]</p>
+      </search-result>
+
+      <search-result>
+        <figure>
+          <img src="https://placeimg.com/480/480/tech" />
+        </figure>
+        <p>[ Search result name ]</p>
+      </search-result>
+
+      <search-result>
+        <figure>
+          <img src="https://placeimg.com/480/480/tech" />
+        </figure>
+        <p>[ Search result name ]</p>
+      </search-result>
+
+      <search-result>
+        <figure>
+          <img src="https://placeimg.com/480/480/tech" />
+        </figure>
+        <p>[ Search result name ]</p>
+      </search-result>
+    </search-results>
+  </site-search>
+
+  <!-- <script src="./build/main.js"></script> -->
+
+  <script>
+    var $ = jQuery;
+    var st = $('.js-search');
+    st.click(function(e){
+      e.preventDefault();
+      $('body').toggleClass('search-is-active');
+    });
+
+    $('business-preview').click(function(){
+      window.location.href = "/business.html";
+    });
+  </script>
+</body>
+</html>

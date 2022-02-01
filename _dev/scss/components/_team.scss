@@ -1,0 +1,180 @@
+// ---------------------------------------------------------------------
+//  Team
+// ---------------------------------------------------------------------
+
+.team-list {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+
+  > span,
+  .team-preview {
+    width: calc(50% - 12px);
+    margin-bottom: 36px;
+
+    @include start-at($large) {
+      width: calc(25% - 25px);
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.team-list--lg {
+  .team-preview {
+    width: 100%;
+    margin-bottom: 72px;
+
+    @include start-at($medium) {
+      width: calc(50% - 25px);
+      margin-bottom: 90px;
+    }
+  }
+}
+
+.team-preview {
+  margin-bottom: 72px;
+
+  &[data-click] {
+    cursor: pointer;
+
+    &:hover {
+      img {
+        opacity: 0.8;
+      }
+      h3 {
+        text-decoration-color: $brand;
+      }
+    }
+  }
+
+  @include start-at($large) {
+    margin-bottom: 90px;
+  }
+
+  figure {
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    margin-bottom: 24px;
+    background: lighten(black, 5%);
+    position: relative;
+    z-index: 1;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      transition: opacity $trans;
+    }
+  }
+}
+
+.team-preview__content {
+
+  h3 {
+    @include h4;
+    font-size: 22px;
+    margin-bottom: 12px;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color $trans;
+
+    @include start-at($large) {
+      font-size: 24px;
+    }
+  }
+
+  p.h5 {
+    margin-bottom: 24px;
+  }
+}
+
+// ----------------------------------------
+// Slide out
+// ----------------------------------------
+
+.slideout-wrap {
+  position: fixed;
+  @include cover-parent;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.2s ease;
+
+	&.is-active {
+		opacity: 1;
+		pointer-events: inherit;
+
+    .slideout {
+      transform: translate3d(0, 0, 0);
+    }
+	}
+}
+
+.slideout-screen {
+  @include cover-parent;
+  position: fixed;
+  background: $black;
+  opacity: .6;
+
+  &:hover {
+    cursor: crosshair;
+  }
+}
+
+.slideout {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 560px;
+  background: #151515;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: transform $trans;
+  transform: translate3d(100%, 0, 0);
+
+  .slideout__close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 32px;
+    height: 32px;
+    background: url('./images/svgs/close.svg') center / cover no-repeat;
+    transition: opacity $trans;
+
+    @include start-at($medium) {
+      top: 40px;
+      right: 40px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+  }
+
+  .slideout__inner {
+    padding: 112px 40px 24px;
+    overflow: hidden;
+  }
+
+  .team-preview figure {
+
+  }
+}
+
+body.modal-is-active {
+  overflow: hidden;
+}

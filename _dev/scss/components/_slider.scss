@@ -1,0 +1,50 @@
+// ---------------------------------------------------------------------
+//  slider
+// ---------------------------------------------------------------------
+
+.slider {
+	width: auto;
+	overflow: auto;
+	display: flex;
+	align-items: stretch;
+  padding-bottom: 24px;
+
+	&::-webkit-scrollbar {
+		display: block;
+		height: 2px;
+		background: $border;
+	}
+	&::-webkit-scrollbar-track {
+	  background: $gray-light;
+	}
+	&::-webkit-scrollbar-thumb {
+	  background: $gray;
+	}
+}
+
+// ----------------------------------------
+// slider
+// ----------------------------------------
+
+.slider--cats {
+	padding: 16px $wrapper-padding;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.cat-pill {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 31px;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 1;
+	border: 1px solid $black;
+	border-radius: 50px;
+	padding: 0 12px;
+	margin-right: 8px;
+	white-space: nowrap;
+}

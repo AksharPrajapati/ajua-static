@@ -1,0 +1,67 @@
+// ---------------------------------------------------------------------
+//  Site Footer Styles
+// ---------------------------------------------------------------------
+
+.site-footer {
+  overflow: hidden;
+  text-align: center;
+  padding: 20px 0;
+  background: $black;
+  color: $white;
+
+  @include start-at($small) {
+    padding: 36px 0;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .site-footer-icon {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+
+    li {
+      margin: 0 14px;
+    }
+
+    i {
+      font-size: 24px;
+    }
+
+    a {
+      transition: color $trans;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+  .social-list a {
+
+  }
+
+
+  .legal-list {
+    small, a {
+      font-size: 13px;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+// ---------------------------------------------------------------------
+//
+// ---------------------------------------------------------------------
+
+.slider--business {
+
+
+}
+
+// ----------------------------------------
+// Business Preview
+// ----------------------------------------
+
+business-preview {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 8px;
+  font-size: 12px;
+
+	width: 244px;
+	min-width: 244px;
+	height: auto;
+	margin-right: 16px;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	@include start-at($medium) {
+		min-width: 360px;
+		width: 360px;
+	}
+}
+
+.business-preview__featured-image {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  height: 183px;
+
+  @include start-at($medium) {
+    height: 240px;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.business-preview__content  {
+  padding: 16px;
+  border: 1px solid $border;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+
+	@include start-at($medium) {
+    padding: 24px;
+  }
+
+  h4 {
+    margin-bottom: 0;
+  }
+
+  rating-preview,
+  business-category {
+    margin: 8px 0;
+  }
+}

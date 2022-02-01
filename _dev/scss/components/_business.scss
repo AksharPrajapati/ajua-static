@@ -1,0 +1,147 @@
+// ---------------------------------------------------------------------
+//
+// ---------------------------------------------------------------------
+
+business {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.business__featured-image {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  height: 310px;
+
+  @include start-at($medium) {
+    height: 460px;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.business__header-content {
+  padding-bottom: 24px;
+  border-bottom: 1px solid $border;
+}
+
+$bl-sm: 84px;
+$bl-md: 168px;
+
+.business__logo {
+  display: block;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  width: $bl-sm;
+  height: $bl-sm;
+  border-radius: 8px;
+  border: 2px solid #F4F7FA;
+  background: $white;
+  margin-bottom: 24px;
+  margin-top: -$bl-sm / 2;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include start-at($medium) {
+    width: $bl-md;
+    height: $bl-md;
+    margin-top: -$bl-md / 2;
+  }
+}
+
+.business__about,
+.business__reviews,
+.business__photos {
+  padding: 24px 0;
+  border-bottom: 1px solid $border;
+}
+
+
+
+// ----------------------------------------
+// Rating Preview
+// ----------------------------------------
+
+.rating-preview,
+rating-preview {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  @include p-sm;
+  font-weight: 500;
+  margin: 12px 0;
+
+  i {
+    margin-right: 4px;
+    color: $yellow;
+    font-size: 15px;
+  }
+
+  > span:first-of-type:after {
+    content: '•';
+    margin: 0 4px;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      color: $brand;
+      transition: color $trans;
+    }
+  }
+}
+
+
+// ----------------------------------------
+// Business Category
+// ----------------------------------------
+
+business-category {
+  display: block;
+  margin: 12px 0;
+  color: #354250;
+}
+
+
+// ----------------------------------------
+// Photo Gallery
+// ----------------------------------------
+
+
+.business__photo-gallery {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  li {
+    width: calc(25% - 4px);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 25%;
+    margin-bottom: 4px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+  }
+
+}

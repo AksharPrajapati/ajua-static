@@ -1,0 +1,79 @@
+// ---------------------------------------------------------------------
+//  Header CSS
+// ---------------------------------------------------------------------
+
+$header-height-sm: 56px;
+$header-height: 56px;
+
+
+// ----------------------------------------
+// Home
+// ----------------------------------------
+
+
+
+// ----------------------------------------
+// Back
+// ----------------------------------------
+
+.view-header {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid $border;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $header-height-sm;
+  color: $black;
+
+  .view-header__left,
+  .view-header__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 100%;
+    z-index: 2;
+    padding: 0 $wrapper-padding;
+
+    i {
+      display: block;
+      color: currentColor;
+    }
+  }
+
+  .view-header__featured {
+    flex-grow: 1;
+    text-align: center;
+    padding: 0 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    a {
+      display: inline-block;
+    }
+
+    img, svg {
+      margin: 0 auto;
+    }
+  }
+
+  .ri-arrow-left-s-line {
+    font-size: 22px;
+  }
+
+  .ri-search-2-line {
+    font-size: 20px;
+  }
+
+  .ri-menu-line {
+    font-size: 22px;
+  }
+}

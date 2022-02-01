@@ -1,0 +1,132 @@
+// ---------------------------------------------------------------------
+//  Tabs
+// ---------------------------------------------------------------------
+
+
+.tabs {
+  position: relative;
+  z-index: 2;
+}
+
+// ----------------------------------------
+// Tab Tab
+// ----------------------------------------
+
+.tabs__tabs {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  border-bottom: 1px solid $black;
+  position: relative;
+  z-index: 13;
+  margin-bottom: 32px;
+
+  @include stop-at($large) {
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+.tabs__tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: $black;
+  padding: 3px 0;
+  height: 60px;
+  border-radius: 0;
+  transition: color $trans, background $trans, border-color $trans;
+  white-space: nowrap;
+  font-size: 18px;
+  margin-right: 24px;
+
+  @include start-at($medium) {
+    margin-right: 48px;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: $blue;
+    transform: scaleX(0);
+    transition: transform $trans;
+  }
+
+  &:focus {
+    cursor: pointer;
+    color: $brand;
+    outline: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $gray-600;
+
+    &:after {
+      transform: scaleX(0.4);
+    }
+  }
+
+  &.is-active {
+    color: $brand;
+
+    &:after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.tabs__body {
+  position: relative;
+}
+
+.tabs__body .tabs__content {
+  //overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  pointer-events: none;
+
+  &.is-active {
+    position: relative;
+    pointer-events: inherit;
+    opacity: 1;
+    transition-delay: 0.2s;
+  }
+}
+
+.tabs-content .tabs__content {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease-in-out;
+
+  &.is-active {
+    display: block;
+    transition-delay: 0.2s;
+    opacity: 1;
+    position: relative;
+    pointer-events: inherit;
+  }
+}
+
+.no-js .tabs__content {
+  opacity: 1;
+  display: block;
+  pointer-events: inherit;
+}
