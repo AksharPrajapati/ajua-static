@@ -25,6 +25,7 @@ $header-height: 56px;
   justify-content: center;
   height: $header-height-sm;
   color: $black;
+  transition: background $trans, color $trans, border-color $trans;
 
   .view-header__left,
   .view-header__right {
@@ -62,6 +63,11 @@ $header-height: 56px;
 
     img, svg {
       margin: 0 auto;
+      display: block;
+
+      *[fill="#15171A"] {
+        fill: currentColor;
+      }
     }
   }
 

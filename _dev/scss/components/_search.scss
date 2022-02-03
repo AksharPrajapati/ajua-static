@@ -16,7 +16,6 @@ search-trigger {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  transition: color $trans;
 
   i {
     position: relative;
@@ -37,7 +36,6 @@ search-trigger {
 body.search-is-active {
 
   search-trigger {
-
     i {
       color: $white !important;
     }
