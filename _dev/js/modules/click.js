@@ -13,7 +13,7 @@ class Click {
 	}
 
 	setup() {
-		if( $('[data-click]').length ) {
+		if( $('[data-modal]').length ) {
 			this.events();
 		} else {
 			return;
@@ -22,12 +22,12 @@ class Click {
 
 	events() {
 
-    const targetOpen = $('*[data-click]');
+    const targetOpen = $('*[data-modal]');
 
     targetOpen.on('click touchstart:not(touchmove)', function(event) {
       event.preventDefault();
       let el = $(this);
-      let trigger = el.attr('data-click');
+      let trigger = el.attr('data-modal');
       let target = $("#" + trigger);
 
       if( target.hasClass('is-active') ) {
