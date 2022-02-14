@@ -2,11 +2,26 @@
 //  Banner
 // ---------------------------------------------------------------------
 
+.banner-cats {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .banner {
+    order: 1;
+  }
+
+  .slider {
+    order: 2;
+  }
+}
+
 .banner {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  padding: 62px 0;
+  width: 100%;
+  padding: 60px 0 98px;
   color: $white;
   text-align: center;
 
@@ -15,6 +30,7 @@
     align-items: center;
     justify-content: center;
     padding: 220px 0;
+    min-height: 720px;
   }
 }
 
@@ -28,6 +44,26 @@
   }
 }
 
+.banner__ft {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 12px 4%;
+  background: linear-gradient(90deg, #4171F3 4.17%, #922DE2 100%);
+  color: $white;
+  text-align: center;
+  z-index: 2;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+
+    i {
+      margin-left: 4px;
+    }
+  }
+}
 
 .banner__img {
   position: absolute;

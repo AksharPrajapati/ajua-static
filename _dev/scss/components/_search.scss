@@ -2,7 +2,7 @@
 //  Search
 // ---------------------------------------------------------------------
 
-search-trigger {
+quick-search-trigger {
   display: block;
   width: 42px;
   min-width: 42px;
@@ -16,6 +16,10 @@ search-trigger {
   position: relative;
   z-index: 1;
   overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   i {
     position: relative;
@@ -44,10 +48,10 @@ body.search-is-active {
       opacity: 1;
     }
   }
-
 }
 
-site-search {
+
+quick-search {
   position: fixed;
   top: 0;
   left: 0;
@@ -99,13 +103,14 @@ site-search {
     }
   }
 
-  search-results {
+  quick-search-results {
     display: block;
     @include wrapper;
     margin-top: 18px;
   }
 
-  search-result {
+  quick-search-result {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -133,13 +138,90 @@ site-search {
     }
   }
 
+  .quick-search-close {
+    display: none;
+  }
+
+  @include start-at($header-breakpoint) {
+    position: fixed;
+    //display: block;
+    transform: translate3d(0,0,0);
+    //transform: none !important;
+    top: 81px;
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    .view-header {
+      display: none;
+    }
+
+    .quick-search-inner {
+      height: 400px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+
+    quick-search-results {
+      width: 100%;
+      height: auto;
+      margin-bottom: 72px;
+    }
+
+    .quick-search-close {
+      display: block;
+      width: 100%;
+      background: white;
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      padding: 12px;
+      background: white;
+
+      div {
+        text-decoration: underline;
+        transition: opacity $trans;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
 }
 
+.quick-search-screen {
+  display: none;
+}
+
+
 body.search-is-active {
-  site-search {
+  overflow: hidden;
+  
+  .quick-search-screen {
     display: block;
-    pointer-events: inherit;
-    transform: translate3d(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8;
+  }
+
+  @include stop-at($header-breakpoint) {
+    quick-search {
+      display: block;
+      pointer-events: inherit;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  @include start-at($header-breakpoint) {
+    quick-search {
+      display: block;
+      pointer-events: inherit;
+      transform: translate3d(0, 0, 0);
+    }
   }
 }
 

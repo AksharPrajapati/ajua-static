@@ -46,9 +46,9 @@
       </div>
 
       <div class="view-header__right">
-        <search-trigger class="js-search">
+        <quick-search-trigger class="js-search">
           <i class="ri-search-2-line"></i>
-        </search-trigger>
+        </quick-search-trigger>
       </div>
 
       <nav class="navigation-drawer">
@@ -84,30 +84,62 @@
           </ul>
         </div>
       </nav>
-
     </header>
 
-    <div class="slider slider--cats">
-      <a class="cat-pill" href="">Restaurants</a>
-      <a class="cat-pill" href="">Hotels</a>
-      <a class="cat-pill" href="">Beauty Care</a>
-      <a class="cat-pill" href="">Retail</a>
-      <a class="cat-pill" href="">Banking</a>
-    </div>
-
-    <div class="banner">
-      <div class="banner__content">
-        <div class="wrapper">
-          <h1 class="h1">Find Nigeria’s best local businesses</h1>
-          <form class="lone-search">
+    <header class="view-header-lg">
+      <div class="view-header-lg__inner">
+        <div class="view-header-lg__left">
+          <a class="site-logo" href="">
+            <img src="./build/images/Ajua-logo.svg" alt="Ajua" />
+            <h2 class="sr-only">Ajua</h2>
+          </a>
+          <form class="view-header-lg__search js-open-quick-search">
             <i class="ri-search-2-line"></i>
-            <input type="text" placeholder="What are you looking for?" value="" />
+            <input class="js-open-quick-search" type="text" placeholder="Start typing"/>
           </form>
         </div>
+
+        <ul class="view-header-lg__nav">
+          <li>
+            <a href="">Home</a>
+          </li>
+          <li>
+            <a href="">For Business</a>
+          </li>
+          <li>
+            <a href="">About</a>
+          </li>
+        </ul>
       </div>
-      <figure class="banner__img">
-        <img src="https://placeimg.com/1480/680/people" />
-      </figure>
+    </header>
+
+    <div class="banner-cats">
+      <div class="slider slider--cats">
+        <a class="cat-pill" href="">Restaurants</a>
+        <a class="cat-pill" href="">Hotels</a>
+        <a class="cat-pill" href="">Beauty Care</a>
+        <a class="cat-pill" href="">Retail</a>
+        <a class="cat-pill" href="">Banking</a>
+      </div>
+
+      <div class="banner">
+        <div class="banner__content">
+          <div class="wrapper">
+            <h1 class="h1">Find Nigeria’s best local businesses</h1>
+            <form class="lone-search">
+              <i class="ri-search-2-line"></i>
+              <input type="text" placeholder="What are you looking for?" value="" />
+            </form>
+          </div>
+        </div>
+        <figure class="banner__img">
+          <img src="https://placeimg.com/1480/680/people" />
+        </figure>
+
+        <div class="banner__ft">
+          <p>Are you a business owner? <a href="">Join Our Network <i class="ri-arrow-right-line"></i></a></p>
+        </div>
+      </div>
     </div>
 
     <div class="py-4 py-md-6 wrapper">
@@ -291,29 +323,64 @@
           </div>
         </business-preview>
 
+        <business-preview>
+          <figure class="business-preview__featured-image">
+            <img src="https://placeimg.com/470/470/any" />
+          </figure>
+
+          <div class="business-preview__content">
+            <h4>Good Eats Cafe</h4>
+
+            <rating-preview>
+              <i class="ri-star-fill"></i>
+              <span>4.3</span>
+              <a href="#reviews">24 reviews</a>
+            </rating-preview>
+
+            <business-category>
+              <span>[business category]</span>
+            </business-category>
+
+            <address>
+              18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
+            </address>
+
+          </div>
+        </business-preview>
+
+        <span class="spacer"></span>
+        <span class="spacer"></span>
       </business-list>
 
+      <div class="d-flex flex-justify-end">
+        <a class="link-gradient" href="">
+          <span>See more top rated</span>
+          <i class="ri-arrow-right-line"></i>
+        </a>
+      </div>
     </div>
 
-    <div class="wrapper py-6">
-      <h3 class="h6">About Ajua</h3>
-      <p>Ajua is Africa’s largest network of trusted local businesses. We believe in the power of community and connection.</p>
+    <div class="wrapper py-6 mb-lg-6">
+      <div class="col-md-10 col-lg-5">
+        <h3 class="h6">About Ajua</h3>
+        <p>Ajua is Africa’s largest network of trusted local businesses. We believe in the power of community and connection.</p>
+      </div>
 
       <div class="d-flex mt-4">
         <div class="col-4 pr-2">
-          <figure class="img-square mb-2">
+          <figure class="img-square mb-2 mb-lg-4">
             <img src="./build/images/marketing/local-business.png" />
           </figure>
           <p class="font-weight-500">Find local businesses</p>
         </div>
         <div class="col-4 px-1">
-          <figure class="img-square mb-2">
+          <figure class="img-square mb-2 mb-lg-4">
             <img src="./build/images/marketing/reviews.png" />
           </figure>
           <p class="font-weight-500">Read and leave reviews</p>
         </div>
         <div class="col-4 pl-2">
-          <figure class="img-square mb-2">
+          <figure class="img-square mb-2 mb-lg-4">
             <img src="./build/images/marketing/whatsapp.svg" />
           </figure>
           <p class="font-weight-500">Engage on WhatsApp</p>
@@ -375,55 +442,88 @@
     </div>
   </footer>
 
-  <site-search>
-    <header class="view-header">
-      <div class="view-header__left">
-        <a href="/">
-          <i class="ri-arrow-left-s-line"></i>
-        </a>
+  <quick-search>
+    <div class="quick-search-inner">
+      <div class="view-header">
+        <div class="view-header__left">
+          <a href="/">
+            <i class="ri-arrow-left-s-line"></i>
+          </a>
+        </div>
+
+        <div class="view-header__featured">
+          <input type="text" id="site-search-input" placeholder="Start typing"/>
+        </div>
+
+        <div class="view-header__right">
+          <quick-search-trigger class="js-search">
+            <i class="ri-search-2-line"></i>
+          </quick-search-trigger>
+        </div>
       </div>
 
-      <div class="view-header__featured">
-        <input type="text" id="site-search-input" placeholder="Start typing"/>
-      </div>
+      <quick-search-results>
+        <quick-search-result>
+          <figure>
+            <img src="https://placeimg.com/480/480/tech" />
+          </figure>
+          <p>[ Search result name ]</p>
+        </quick-search-result>
 
-      <div class="view-header__right">
-        <search-trigger class="js-search">
-          <i class="ri-search-2-line"></i>
-        </search-trigger>
-      </div>
-    </header>
+        <quick-search-result>
+          <figure>
+            <img src="https://placeimg.com/480/480/tech" />
+          </figure>
+          <p>[ Search result name ]</p>
+        </quick-search-result>
 
-    <search-results>
-      <search-result>
-        <figure>
-          <img src="https://placeimg.com/480/480/tech" />
-        </figure>
-        <p>[ Search result name ]</p>
-      </search-result>
+        <quick-search-result>
+          <figure>
+            <img src="https://placeimg.com/480/480/tech" />
+          </figure>
+          <p>[ Search result name ]</p>
+        </quick-search-result>
 
-      <search-result>
-        <figure>
-          <img src="https://placeimg.com/480/480/tech" />
-        </figure>
-        <p>[ Search result name ]</p>
-      </search-result>
+        <quick-search-result>
+          <figure>
+            <img src="https://placeimg.com/480/480/tech" />
+          </figure>
+          <p>[ Search result name ]</p>
+        </quick-search-result>
+        <quick-search-result>
+          <figure>
+            <img src="https://placeimg.com/480/480/tech" />
+          </figure>
+          <p>[ Search result name ]</p>
+        </quick-search-result>
 
-      <search-result>
-        <figure>
-          <img src="https://placeimg.com/480/480/tech" />
-        </figure>
-        <p>[ Search result name ]</p>
-      </search-result>
+        <quick-search-result>
+          <figure>
+            <img src="https://placeimg.com/480/480/tech" />
+          </figure>
+          <p>[ Search result name ]</p>
+        </quick-search-result>
 
-      <search-result>
-        <figure>
-          <img src="https://placeimg.com/480/480/tech" />
-        </figure>
-        <p>[ Search result name ]</p>
-      </search-result>
-    </search-results>
-  </site-search>
+        <quick-search-result>
+          <figure>
+            <img src="https://placeimg.com/480/480/tech" />
+          </figure>
+          <p>[ Search result name ]</p>
+        </quick-search-result>
+
+        <quick-search-result>
+          <figure>
+            <img src="https://placeimg.com/480/480/tech" />
+          </figure>
+          <p>[ Search result name ]</p>
+        </quick-search-result>
+      </quick-search-results>
+    </div>
+    <div class="quick-search-close">
+      <div class="js-close-quick-search">Close</div>
+    </div>
+  </quick-search>
+  <div class="quick-search-screen js-close-quick-search"></div>
 
   <!-- <script src="./build/main.js"></script> -->
 
@@ -433,6 +533,15 @@
     st.click(function(e){
       e.preventDefault();
       $('body').toggleClass('search-is-active');
+    });
+
+    $('.js-open-quick-search').click(function(e){
+      e.preventDefault();
+      $('body').addClass('search-is-active');
+    });
+    $('.js-close-quick-search').click(function(e){
+      e.preventDefault();
+      $('body').removeClass('search-is-active');
     });
 
     const nav = $('.js-open-nav');

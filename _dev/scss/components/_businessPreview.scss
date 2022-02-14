@@ -2,9 +2,23 @@
 //
 // ---------------------------------------------------------------------
 
-.slider--business {
+.slider.slider--business {
 
+  @include start-at($header-breakpoint) {
+    width: 100%;
+    overflow: hidden;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 0;
 
+    business-preview,
+    .spacer {
+      display: block;
+      width: calc(25% - 24px);
+      min-width: calc(25% - 24px);
+      margin: 0 0 24px;
+    }
+  }
 }
 
 // ----------------------------------------
@@ -19,7 +33,6 @@ business-preview {
   overflow: hidden;
   border-radius: 8px;
   font-size: 12px;
-
 	width: 244px;
 	min-width: 244px;
 	height: auto;

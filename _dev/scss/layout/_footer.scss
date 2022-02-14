@@ -4,7 +4,6 @@
 
 .site-footer {
   overflow: hidden;
-  text-align: center;
   padding: 20px 0;
   background: $black;
   color: $white;
@@ -18,11 +17,22 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    text-align: center;
+    position: relative;
+
+    @include start-at($large) {
+      text-align: left;
+      justify-content: flex-start;
+    }
   }
 
   .site-footer-icon {
     display: inline-block;
     margin: 0 auto;
+
+    @include start-at($large) {
+      margin: 0;
+    }
   }
 
   ul {
@@ -48,10 +58,34 @@
         color: $blue;
       }
     }
+
+    @include start-at($large) {
+      justify-content: flex-start;
+
+      li {
+        margin: 0 24px 0 0;
+      }
+    }
   }
 
   .social-list a {
 
+  }
+
+  .social-list {
+
+    @include start-at($large) {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate3d(0, -50%, 0);
+      justify-content: flex-end;
+      margin: 0;
+
+      li {
+        margin: 0 0 0 24px;
+      }
+    }
   }
 
 

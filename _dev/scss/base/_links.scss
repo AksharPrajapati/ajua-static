@@ -157,6 +157,27 @@ a.link {
   }
 }
 
+.link-gradient {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+  text-align: right;
+  letter-spacing: -0.01em;
+  color: $blue;
+  background: linear-gradient(90deg, #4171F3 4.17%, #922DE2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-flex;
+  align-items: center;
+
+  span + i,
+  i + span {
+    margin-left: 4px;
+  }
+}
+
 // ----------------------------------------
 //
 // ----------------------------------------
