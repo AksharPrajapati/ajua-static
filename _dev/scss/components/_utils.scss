@@ -2,6 +2,21 @@
 //  Utility Classes
 // ---------------------------------------------------------------------
 
+.has-accent-top {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: relative;
+    width: 64px;
+    height: 1px;
+    background: linear-gradient(90deg, #4171F3 4.17%, #922DE2 100%);
+    display: block;
+    margin-bottom: 36px;
+  }
+}
+
+
 .icon-circle {
   width: 48px;
   height: 48px;
@@ -50,184 +65,6 @@
     position: absolute;
   }
 }
-
-// ----------------------------------------
-// Line wrap
-// ----------------------------------------
-
-.line-wrap {
-  border: 1px solid $border;
-  position: relative;
-}
-
-.line-wrap__hd {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  background: $white;
-  padding: 4px 36px;
-  margin-top: -1px;
-
-  .h5 {
-    line-height: 1;
-    white-space: nowrap;
-  }
-
-  &:before,
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translate3d(0, -50%, 0);
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: $border;
-  }
-
-  &:before {
-    left: 0;
-  }
-  &:after {
-    right: 0;
-  }
-}
-
-.line-wrap__bd {
-  padding: 36px 24px 0;
-
-  @include start-at($medium) {
-    padding: 92px 92px 0;
-  }
-}
-
-
-.line-right,
-.line-left {
-  display: inline-block;
-  position: relative;
-
-  &:before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    background: $gray;
-    border-radius: 6px;
-    display: block;
-    position: absolute;
-    left: calc(100% + 8px);
-    top: calc(50% - 3px);
-  }
-
-  &:after {
-    content: '';
-    width: 120vw;
-    height: 1px;
-    background: $gray;
-    border-radius: 6px;
-    display: block;
-    position: absolute;
-    left: calc(100% + 8px);
-    top: 50%;
-    transform: translate3d(0, -50%, 0) scale(0);
-    transition: transform 3s ease-in-out;
-    transform-origin: left;
-  }
-
-  &.in-view {
-
-    &:after {
-      transition-delay: .5s;
-      transform: translate3d(0, -50%, 0) scale(1);
-    }
-  }
-}
-
-.line-left {
-  display: block;
-
-  &:before {
-    right: calc(100% + 34px);
-    left: auto;
-    top: 11px;
-  }
-
-  &:after {
-    left: auto;
-    right: calc(100% + 36px);
-    top: 14px;
-    transform-origin: right;
-  }
-
-  &.in-view {
-
-    &:after {
-      transition-delay: .5s;
-      transform: translate3d(0, -50%, 0) scale(1);
-    }
-  }
-}
-
-
-.theme-dark {
-  .line-wrap {
-    border-color: $gray;
-  }
-
-  .line-wrap__hd {
-    background: $black;
-    color: $white;
-
-    &:before,
-    &:after {
-      background: $gray;
-    }
-  }
-}
-
-.page-id-165 {
-  .logo-list-wrap{
-    background: $black;
-
-    img {
-      //fill: $white;
-    }
-  }
-  .line-wrap {
-    border: none;
-
-  }
-
-  .line-wrap__hd {
-    background: $black;
-    color: $white;
-
-    &:before,
-    &:after {
-      display: none;
-    }
-  }
-}
-
-
-
-.moon-wrap {
-  position: relative;
-}
-.moon-left {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  transform: translate3d(-100%, -50%, 0);
-  transition: transform 3s ease-in-out;
-
-  &.in-view {
-    transform: translate3d(-50%, -50%, 0);
-  }
-}
-
 
 
 // ----------------------------------------

@@ -118,6 +118,14 @@ a.icon-link {
   }
 }
 
+.link-plain {
+  font-weight: 500;
+  background: linear-gradient(90deg, #4171F3 4.17%, #922DE2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
 
 // ----------------------------------------
 // Links
