@@ -74,7 +74,7 @@ $small: 544px;
 // ----------------------------------------
 
 
-$header-breakpoint: 960px;
+$header-breakpoint: $large;
 
 $transition-speed: 0.4s;
 $transition: $transition-speed ease;

@@ -3,9 +3,21 @@
 // ---------------------------------------------------------------------
 
 business {
+  display: block;
   width: 100%;
   position: relative;
   overflow: hidden;
+
+  @include start-at($medium) {
+    max-width: 816px;
+    margin: 32px auto;
+    z-index: 2;
+
+    .wrapper {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
 }
 
 .business__featured-image {
@@ -16,7 +28,8 @@ business {
   height: 310px;
 
   @include start-at($medium) {
-    height: 460px;
+    height: 408px;
+    border-radius: 8px;
   }
 
   img {
@@ -28,8 +41,47 @@ business {
 
 
 .business__header-content {
+  position: relative;
   padding-bottom: 24px;
   border-bottom: 1px solid $border;
+
+  @include start-at($header-breakpoint) {
+    padding: 24px 0 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    h3 {
+      margin: 0;
+      margin-left: 12px;
+      flex-grow: 1;
+      width: calc(100% - 348px);
+      margin-right: 200px;
+    }
+
+    .business-header__social {
+      position: absolute;
+      right: 0;
+      top: 32px;
+    }
+
+    .business__header__details {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      > * + * {
+        position: relative;
+
+        &:before {
+          content: '•';
+          margin: 0 12px;
+        }
+      }
+    }
+
+  }
 }
 
 $bl-sm: 84px;
@@ -54,10 +106,9 @@ $bl-md: 168px;
     height: 100%;
   }
 
-  @include start-at($medium) {
-    width: $bl-md;
-    height: $bl-md;
-    margin-top: -$bl-md / 2;
+  @include start-at($header-breakpoint) {
+    margin: 0;
+
   }
 }
 
@@ -83,6 +134,8 @@ rating-preview {
   font-weight: 500;
   margin: 12px 0;
 
+
+
   i {
     margin-right: 4px;
     color: $yellow;
@@ -102,7 +155,31 @@ rating-preview {
       transition: color $trans;
     }
   }
+
+  @include start-at($header-breakpoint) {
+    font-size: 16px;
+
+    i {
+      font-size: 16px;
+    }
+  }
 }
+
+// business reviews {
+//   display: block;
+//
+//   @include start-at($header-breakpoint) {
+//     display: flex;
+//     align-items: flex-start;
+//     justify-content: space-between;
+//     flex-wrap: wrap;
+//
+//     review {
+//       width: calc(50% - 12px);
+//       margin-bottom: 24px;
+//     }
+//   }
+// }
 
 
 // ----------------------------------------

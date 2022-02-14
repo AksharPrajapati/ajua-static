@@ -11,10 +11,8 @@ review {
   border: 1px solid $border;
   border-radius: 8px;
   display: block;
+  margin-bottom: 8px;
 
-  + review {
-    margin-top: 8px;
-  }
 }
 
 review-header {

@@ -8,7 +8,6 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 
-
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
   <link rel="stylesheet" media="screen" href="./build/main.css" />
@@ -34,6 +33,33 @@
       </search-trigger>
     </header>
 
+    <header class="view-header-lg">
+      <div class="view-header-lg__inner">
+        <div class="view-header-lg__left">
+          <a class="site-logo" href="">
+            <img src="./build/images/Ajua-logo.svg" alt="Ajua" />
+            <h2 class="sr-only">Ajua</h2>
+          </a>
+          <form class="view-header-lg__search js-open-quick-search">
+            <i class="ri-search-2-line"></i>
+            <input class="js-open-quick-search" type="text" placeholder="Start typing"/>
+          </form>
+        </div>
+
+        <ul class="view-header-lg__nav">
+          <li>
+            <a href="">Home</a>
+          </li>
+          <li>
+            <a href="">For Business</a>
+          </li>
+          <li>
+            <a href="">About</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
     <business>
       <header class="business__header">
         <figure class="business__featured-image">
@@ -46,28 +72,31 @@
           </a>
           <h3>Mchana Coffee Shop</h3>
 
-          <rating-preview>
-            <i class="ri-star-fill"></i>
-            <span>4.9</span>
-            <a href="#">100 reviews</a>
-          </rating-preview>
+          <div class="business__header__details">
+            <rating-preview>
+              <i class="ri-star-fill"></i>
+              <span>4.9</span>
+              <a href="#">100 reviews</a>
+            </rating-preview>
 
-          <business-category>
-            <span>[business category]</span>
-          </business-category>
+            <business-category>
+              <span>[business category]</span>
+            </business-category>
 
-          <address>
-            18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
-          </address>
+            <address>
+              18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
+            </address>
+          </div>
 
-          <div class="d-flex flex-items-center mt-3">
-            <a class="icon-circle icon-cirlce--green mr-4" href="">
+
+          <div class="business-header__social d-flex flex-items-center mt-3">
+            <a class="icon-circle icon-cirlce--green mr-4 mr-lg-0 ml-lg-4" href="">
               <i class="ri-whatsapp-fill"></i>
             </a>
-            <a class="icon-circle icon-cirlce--pink mr-4" href="">
+            <a class="icon-circle icon-cirlce--pink mr-4 mr-lg-0 ml-lg-4" href="">
               <i class="ri-pencil-fill"></i>
             </a>
-            <a class="icon-circle icon-cirlce--blue mr-4" href="">
+            <a class="icon-circle icon-cirlce--blue mr-4 mr-lg-0 ml-lg-4" href="">
               <i class="ri-share-fill"></i>
             </a>
           </div>
@@ -141,267 +170,289 @@
           <span>4.9</span>
           <span>100 reviews</span>
         </rating-preview>
+        <reviews>
+          <review>
+            <review-header>
+              <review-customer>
+                <figure>
+                  <img src="https://placeimg.com/80/80/people" />
+                </figure>
+                <div>
+                  <p class="review-customer-name">Lorem Ipsum</p>
+                  <p>Jan 27, 2022</p>
+                </div>
+              </review-customer>
+              <review-rating>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </review-rating>
+            </review-header>
+            <review-review>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+            </review-review>
+          </review>
 
-        <review>
-          <review-header>
-            <review-customer>
-              <figure>
-                <img src="https://placeimg.com/80/80/people" />
-              </figure>
-              <div>
-                <p class="review-customer-name">Lorem Ipsum</p>
-                <p>Jan 27, 2022</p>
-              </div>
-            </review-customer>
-            <review-rating>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-            </review-rating>
-          </review-header>
-          <review-review>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-          </review-review>
-        </review>
+          <review>
+            <review-header>
+              <review-customer class="verified">
+                <figure>
+                  <img src="https://placeimg.com/90/90/people" />
+                </figure>
+                <i class="ri-checkbox-circle-fill"></i>
+                <div>
+                  <p class="review-customer-name">Dede Mabiaku</p>
+                  <p>Jan 27, 2022  • Verified</p>
+                </div>
+              </review-customer>
+              <review-rating>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </review-rating>
+            </review-header>
+            <review-review>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </review-review>
+          </review>
 
-        <review>
-          <review-header>
-            <review-customer class="verified">
-              <figure>
-                <img src="https://placeimg.com/90/90/people" />
-              </figure>
-              <i class="ri-checkbox-circle-fill"></i>
-              <div>
-                <p class="review-customer-name">Dede Mabiaku</p>
-                <p>Jan 27, 2022  • Verified</p>
-              </div>
-            </review-customer>
-            <review-rating>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-            </review-rating>
-          </review-header>
-          <review-review>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </review-review>
-        </review>
-
-        <review>
-          <review-header>
-            <review-customer class="verified">
-              <figure>
-                <img src="https://placeimg.com/90/90/people" />
-              </figure>
-              <i class="ri-checkbox-circle-fill"></i>
-              <div>
-                <p class="review-customer-name">Dede Mabiaku</p>
-                <p>Jan 27, 2022  • Verified</p>
-              </div>
-            </review-customer>
-            <review-rating>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-            </review-rating>
-          </review-header>
-          <review-review>
-            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-          </review-review>
-        </review>
+          <review>
+            <review-header>
+              <review-customer class="verified">
+                <figure>
+                  <img src="https://placeimg.com/90/90/people" />
+                </figure>
+                <i class="ri-checkbox-circle-fill"></i>
+                <div>
+                  <p class="review-customer-name">Dede Mabiaku</p>
+                  <p>Jan 27, 2022  • Verified</p>
+                </div>
+              </review-customer>
+              <review-rating>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </review-rating>
+            </review-header>
+            <review-review>
+              <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </review-review>
+          </review>
+        </reviews>
 
         <a class="btn-outline mt-3" href="/all-reviews.html">Show all <span>XXX</span> reviews</a>
       </div>
 
 
-      <div class="business__related py-4 wrapper">
-        <h3 class="h6">You might also like</h3>
-
-        <business-list class="slider slider--business">
-
-          <business-preview>
-            <figure class="business-preview__featured-image">
-              <img src="https://placeimg.com/480/480/tech" />
-            </figure>
-
-            <div class="business-preview__content">
-              <h4>Mchana Coffee Shop</h4>
-
-              <rating-preview>
-                <i class="ri-star-fill"></i>
-                <span>4.9</span>
-                <a href="#">100 reviews</a>
-              </rating-preview>
-
-              <business-category>
-                <span>[business category]</span>
-              </business-category>
-
-              <address>
-                18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
-              </address>
-
-            </div>
-          </business-preview>
-
-          <business-preview>
-            <figure class="business-preview__featured-image">
-              <img src="https://placeimg.com/480/482/any" />
-            </figure>
-
-            <div class="business-preview__content">
-              <h4>Good Eats Cafe</h4>
-              <rating-preview>
-                <i class="ri-star-fill"></i>
-                <span>4.3</span>
-                <a href="#">24 reviews</a>
-              </rating-preview>
-              <business-category>
-                <span>[business category]</span>
-              </business-category>
-              <address>
-                18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
-              </address>
-            </div>
-          </business-preview>
-
-          <business-preview>
-            <figure class="business-preview__featured-image">
-              <img src="https://placeimg.com/480/481/any" />
-            </figure>
-
-            <div class="business-preview__content">
-              <h4>Good Eats Cafe</h4>
-
-              <rating-preview>
-                <i class="ri-star-fill"></i>
-                <span>4.3</span>
-                <a href="#">24 reviews</a>
-              </rating-preview>
-
-              <business-category>
-                <span>[business category]</span>
-              </business-category>
-
-              <address>
-                18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
-              </address>
-
-            </div>
-          </business-preview>
-
-          <business-preview>
-            <figure class="business-preview__featured-image">
-              <img src="https://placeimg.com/480/482/any" />
-            </figure>
-
-            <div class="business-preview__content">
-              <h4>Good Eats Cafe</h4>
-
-              <rating-preview>
-                <i class="ri-star-fill"></i>
-                <span>4.3</span>
-                <a href="#">24 reviews</a>
-              </rating-preview>
-
-              <business-category>
-                <span>[business category]</span>
-              </business-category>
-
-              <address>
-                18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
-              </address>
-
-            </div>
-          </business-preview>
-
-          <business-preview>
-            <figure class="business-preview__featured-image">
-              <img src="https://placeimg.com/484/480/any" />
-            </figure>
-
-            <div class="business-preview__content">
-              <h4>Good Eats Cafe</h4>
-
-              <rating-preview>
-                <i class="ri-star-fill"></i>
-                <span>4.3</span>
-                <a href="#">24 reviews</a>
-              </rating-preview>
-
-              <business-category>
-                <span>[business category]</span>
-              </business-category>
-
-              <address>
-                18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
-              </address>
-
-            </div>
-          </business-preview>
-
-
-          <business-preview>
-            <figure class="business-preview__featured-image">
-              <img src="https://placeimg.com/486/480/any" />
-            </figure>
-
-            <div class="business-preview__content">
-              <h4>Good Eats Cafe</h4>
-
-              <rating-preview>
-                <i class="ri-star-fill"></i>
-                <span>4.3</span>
-                <a href="#">24 reviews</a>
-              </rating-preview>
-
-              <business-category>
-                <span>[business category]</span>
-              </business-category>
-
-              <address>
-                18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
-              </address>
-
-            </div>
-          </business-preview>
-
-          <business-preview>
-            <figure class="business-preview__featured-image">
-              <img src="https://placeimg.com/470/470/any" />
-            </figure>
-
-            <div class="business-preview__content">
-              <h4>Good Eats Cafe</h4>
-
-              <rating-preview>
-                <i class="ri-star-fill"></i>
-                <span>4.3</span>
-                <a href="#">24 reviews</a>
-              </rating-preview>
-
-              <business-category>
-                <span>[business category]</span>
-              </business-category>
-
-              <address>
-                18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
-              </address>
-
-            </div>
-          </business-preview>
-
-        </business-list>
-
-      </div>
 
     </business>
+
+    <div class="business__related py-7 wrapper">
+      <h3 class="h6">You might also like</h3>
+      <business-list class="slider slider--business">
+        <business-preview>
+          <figure class="business-preview__featured-image">
+            <img src="https://placeimg.com/480/480/tech" />
+          </figure>
+
+          <div class="business-preview__content">
+            <h4>Mchana Coffee Shop</h4>
+
+            <rating-preview>
+              <i class="ri-star-fill"></i>
+              <span>4.9</span>
+              <a href="#">100 reviews</a>
+            </rating-preview>
+
+            <business-category>
+              <span>[business category]</span>
+            </business-category>
+
+            <address>
+              18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
+            </address>
+
+          </div>
+        </business-preview>
+
+        <business-preview>
+          <figure class="business-preview__featured-image">
+            <img src="https://placeimg.com/480/482/any" />
+          </figure>
+
+          <div class="business-preview__content">
+            <h4>Good Eats Cafe</h4>
+            <rating-preview>
+              <i class="ri-star-fill"></i>
+              <span>4.3</span>
+              <a href="#">24 reviews</a>
+            </rating-preview>
+            <business-category>
+              <span>[business category]</span>
+            </business-category>
+            <address>
+              18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
+            </address>
+          </div>
+        </business-preview>
+
+        <business-preview>
+          <figure class="business-preview__featured-image">
+            <img src="https://placeimg.com/480/481/any" />
+          </figure>
+
+          <div class="business-preview__content">
+            <h4>Good Eats Cafe</h4>
+
+            <rating-preview>
+              <i class="ri-star-fill"></i>
+              <span>4.3</span>
+              <a href="#">24 reviews</a>
+            </rating-preview>
+
+            <business-category>
+              <span>[business category]</span>
+            </business-category>
+
+            <address>
+              18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
+            </address>
+
+          </div>
+        </business-preview>
+
+        <business-preview>
+          <figure class="business-preview__featured-image">
+            <img src="https://placeimg.com/480/482/any" />
+          </figure>
+
+          <div class="business-preview__content">
+            <h4>Good Eats Cafe</h4>
+
+            <rating-preview>
+              <i class="ri-star-fill"></i>
+              <span>4.3</span>
+              <a href="#">24 reviews</a>
+            </rating-preview>
+
+            <business-category>
+              <span>[business category]</span>
+            </business-category>
+
+            <address>
+              18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
+            </address>
+
+          </div>
+        </business-preview>
+
+        <business-preview>
+          <figure class="business-preview__featured-image">
+            <img src="https://placeimg.com/484/480/any" />
+          </figure>
+
+          <div class="business-preview__content">
+            <h4>Good Eats Cafe</h4>
+
+            <rating-preview>
+              <i class="ri-star-fill"></i>
+              <span>4.3</span>
+              <a href="#">24 reviews</a>
+            </rating-preview>
+
+            <business-category>
+              <span>[business category]</span>
+            </business-category>
+
+            <address>
+              18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
+            </address>
+
+          </div>
+        </business-preview>
+
+        <business-preview>
+          <figure class="business-preview__featured-image">
+            <img src="https://placeimg.com/486/480/any" />
+          </figure>
+
+          <div class="business-preview__content">
+            <h4>Good Eats Cafe</h4>
+
+            <rating-preview>
+              <i class="ri-star-fill"></i>
+              <span>4.3</span>
+              <a href="#">24 reviews</a>
+            </rating-preview>
+
+            <business-category>
+              <span>[business category]</span>
+            </business-category>
+
+            <address>
+              18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
+            </address>
+
+          </div>
+        </business-preview>
+
+        <business-preview>
+          <figure class="business-preview__featured-image">
+            <img src="https://placeimg.com/470/470/any" />
+          </figure>
+
+          <div class="business-preview__content">
+            <h4>Good Eats Cafe</h4>
+
+            <rating-preview>
+              <i class="ri-star-fill"></i>
+              <span>4.3</span>
+              <a href="#">24 reviews</a>
+            </rating-preview>
+
+            <business-category>
+              <span>[business category]</span>
+            </business-category>
+
+            <address>
+              18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
+            </address>
+
+          </div>
+        </business-preview>
+
+        <business-preview>
+          <figure class="business-preview__featured-image">
+            <img src="https://placeimg.com/470/470/any" />
+          </figure>
+
+          <div class="business-preview__content">
+            <h4>Good Eats Cafe</h4>
+
+            <rating-preview>
+              <i class="ri-star-fill"></i>
+              <span>4.3</span>
+              <a href="#">24 reviews</a>
+            </rating-preview>
+
+            <business-category>
+              <span>[business category]</span>
+            </business-category>
+
+            <address>
+              18 Ajilete Street, Ogba Ikeja, Lagos Nigeria
+            </address>
+
+          </div>
+        </business-preview>
+      </business-list>
+    </div>
 
 
   </main>

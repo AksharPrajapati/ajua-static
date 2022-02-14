@@ -6790,6 +6790,12 @@ i {
   margin-top: 220px;
 }
 
+@media (min-width: 1012px) {
+  body {
+    padding-top: 80px;
+  }
+}
+
 .view-header-lg {
   position: fixed;
   top: 0;
@@ -6799,7 +6805,7 @@ i {
   background: #ffffff;
   border-bottom: 1px solid #E0E3E6;
 }
-@media (max-width: 959px) {
+@media (max-width: 1011px) {
   .view-header-lg {
     display: none;
   }
@@ -6905,7 +6911,7 @@ i {
   -webkit-transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease;
   transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
-@media (min-width: 960px) {
+@media (min-width: 1012px) {
   .view-header {
     display: none;
   }
@@ -6985,7 +6991,7 @@ i {
   -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
-@media (min-width: 960px) {
+@media (min-width: 1012px) {
   .navigation-drawer {
     display: none;
   }
@@ -7310,7 +7316,7 @@ quick-search quick-search-result p {
 quick-search .quick-search-close {
   display: none;
 }
-@media (min-width: 960px) {
+@media (min-width: 1012px) {
   quick-search {
     position: fixed;
     -webkit-transform: translate3d(0, 0, 0);
@@ -7370,7 +7376,7 @@ body.search-is-active .quick-search-screen {
   left: 0;
   z-index: 8;
 }
-@media (max-width: 959px) {
+@media (max-width: 1011px) {
   body.search-is-active quick-search {
     display: block;
     pointer-events: inherit;
@@ -7378,7 +7384,7 @@ body.search-is-active .quick-search-screen {
     transform: translate3d(0, 0, 0);
   }
 }
-@media (min-width: 960px) {
+@media (min-width: 1012px) {
   body.search-is-active quick-search {
     display: block;
     pointer-events: inherit;
@@ -7433,7 +7439,7 @@ body.search-is-active .quick-search-screen {
   -ms-flex-order: 2;
   order: 2;
 }
-@media (min-width: 960px) {
+@media (min-width: 1012px) {
   .banner-cats .slider {
     width: 1248px;
     margin: 0 auto;
@@ -7546,9 +7552,21 @@ body.search-is-active .quick-search-screen {
 }
 
 business {
+  display: block;
   width: 100%;
   position: relative;
   overflow: hidden;
+}
+@media (min-width: 768px) {
+  business {
+    max-width: 816px;
+    margin: 32px auto;
+    z-index: 2;
+  }
+  business .wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .business__featured-image {
@@ -7560,7 +7578,8 @@ business {
 }
 @media (min-width: 768px) {
   .business__featured-image {
-    height: 460px;
+    height: 408px;
+    border-radius: 8px;
   }
 }
 .business__featured-image img {
@@ -7571,8 +7590,53 @@ business {
 }
 
 .business__header-content {
+  position: relative;
   padding-bottom: 24px;
   border-bottom: 1px solid #E0E3E6;
+}
+@media (min-width: 1012px) {
+  .business__header-content {
+    padding: 24px 0 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .business__header-content h3 {
+    margin: 0;
+    margin-left: 12px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: calc(100% - 348px);
+    margin-right: 200px;
+  }
+  .business__header-content .business-header__social {
+    position: absolute;
+    right: 0;
+    top: 32px;
+  }
+  .business__header-content .business__header__details {
+    margin-top: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+  }
+  .business__header-content .business__header__details > * + * {
+    position: relative;
+  }
+  .business__header-content .business__header__details > * + *:before {
+    content: "•";
+    margin: 0 12px;
+  }
 }
 
 .business__logo {
@@ -7594,11 +7658,9 @@ business {
   width: 100%;
   height: 100%;
 }
-@media (min-width: 768px) {
+@media (min-width: 1012px) {
   .business__logo {
-    width: 168px;
-    height: 168px;
-    margin-top: -84px;
+    margin: 0;
   }
 }
 
@@ -7645,6 +7707,16 @@ rating-preview a:hover {
   -webkit-transition: color 0.4s ease;
   transition: color 0.4s ease;
 }
+@media (min-width: 1012px) {
+  .rating-preview,
+rating-preview {
+    font-size: 16px;
+  }
+  .rating-preview i,
+rating-preview i {
+    font-size: 16px;
+  }
+}
 
 business-category {
   display: block;
@@ -7690,9 +7762,7 @@ review {
   border: 1px solid #E0E3E6;
   border-radius: 8px;
   display: block;
-}
-review + review {
-  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 review-header {
@@ -7784,7 +7854,7 @@ review-rating i {
   margin-left: 4px;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1012px) {
   .slider.slider--business {
     width: 100%;
     overflow: hidden;

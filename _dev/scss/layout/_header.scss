@@ -6,6 +6,12 @@ $header-height-sm: 56px;
 $header-height: 56px;
 
 
+body {
+  @include start-at($header-breakpoint) {
+    padding-top: 80px;
+  }
+}
+
 // ----------------------------------------
 // Home
 // ----------------------------------------
@@ -18,7 +24,7 @@ $header-height: 56px;
   z-index: 10;
   background: $white;
   border-bottom: 1px solid #E0E3E6;
-  
+
   @include stop-at($header-breakpoint) {
     display: none;
   }
