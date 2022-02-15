@@ -7776,12 +7776,13 @@ body.modal-is-active {
   line-height: 1;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #354250;
+  color: #15171A;
   margin-bottom: 24px;
 }
 @media (min-width: 1012px) {
   .filter-group__title {
     font-size: 14px;
+    margin-bottom: 12px;
   }
 }
 
@@ -7805,6 +7806,11 @@ body.modal-is-active {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 12px;
+}
+@media (min-width: 1012px) {
+  .filter {
+    margin-bottom: 8px;
+  }
 }
 .filter:last-child {
   margin-bottom: 0;

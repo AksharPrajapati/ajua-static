@@ -61,7 +61,6 @@
 }
 
 
-
 .filter-group {
   position: relative;
   padding: 24px 20px;
@@ -73,9 +72,6 @@
   }
 }
 
-.filter-group__hd {
-
-}
 
 .filter-group__title {
   padding-right: 90px;
@@ -84,12 +80,12 @@
   line-height: 1;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: $gray;
+  color: $black;
   margin-bottom: 24px;
 
   @include start-at($header-breakpoint) {
     font-size: 14px;
-
+    margin-bottom: 12px;
   }
 }
 
@@ -114,6 +110,10 @@
 .filter {
   display: flex;
   margin-bottom: 12px;
+
+  @include start-at($header-breakpoint) {
+    margin-bottom: 8px;
+  }
 
   &:last-child {
     margin-bottom: 0;
