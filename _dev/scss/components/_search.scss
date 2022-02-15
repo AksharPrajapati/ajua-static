@@ -50,7 +50,6 @@ body.search-is-active {
   }
 }
 
-
 quick-search {
   position: fixed;
   top: 0;
@@ -195,10 +194,9 @@ quick-search {
   display: none;
 }
 
-
 body.search-is-active {
   overflow: hidden;
-  
+
   .quick-search-screen {
     display: block;
     width: 100%;
@@ -253,5 +251,35 @@ body.search-is-active {
   i {
     color: $gray;
     margin-right: 12px;
+  }
+}
+
+
+// ----------------------------------------
+// Lone search
+// ----------------------------------------
+
+.search-results-wrap {
+
+
+  @include start-at($header-breakpoint) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .filters-wrap {
+      width: 277px;
+      min-width: 277px;
+      margin-right: 48px;
+    }
+
+    .search-results {
+      flex-grow: 1;
+
+      search-results {
+        display: block;
+        margin-top: 24px;
+      }
+    }
   }
 }

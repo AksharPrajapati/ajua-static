@@ -100,14 +100,14 @@ module.exports = jQuery;
 const $ = __webpack_require__(0);
 const App = __webpack_require__(2);
 //const Viewport = require('./modules/viewport.js');
-const Header = __webpack_require__(4);
+const Header = __webpack_require__(3);
 // const Tabs = require('./modules/tabs.js');
 // const ScrollTo = require('./modules/scrollTo.js');
 //const Carousel = require('./modules/carousel.js');
 //const Accordion = require('./modules/accordion.js');
 //const Form = require('./modules/form.js');
 //const Draw = require('./modules/draw.js');
-const Click = __webpack_require__(7);
+const Click = __webpack_require__(4);
 // const Filters = require('./modules/filters.js');
 
 $(function(){
@@ -188,8 +188,7 @@ module.exports = App;
 
 
 /***/ }),
-/* 3 */,
-/* 4 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -264,9 +263,7 @@ module.exports = Header;
 
 
 /***/ }),
-/* 5 */,
-/* 6 */,
-/* 7 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

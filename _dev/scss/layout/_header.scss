@@ -12,6 +12,20 @@ body {
   }
 }
 
+.site-header {
+  .view-header-lg {
+    @include stop-at($header-breakpoint) {
+      display: none;
+    }
+  }
+
+  .view-header {
+    @include start-at($header-breakpoint) {
+      display: none;
+    }
+  }
+}
+
 // ----------------------------------------
 // Home
 // ----------------------------------------
@@ -24,10 +38,6 @@ body {
   z-index: 10;
   background: $white;
   border-bottom: 1px solid #E0E3E6;
-
-  @include stop-at($header-breakpoint) {
-    display: none;
-  }
 }
 
 .view-header-lg__inner {
@@ -110,10 +120,6 @@ body {
   height: $header-height-sm;
   color: $black;
   transition: background $trans, color $trans, border-color $trans;
-
-  @include start-at($header-breakpoint) {
-    display: none;
-  }
 
   .view-header__left,
   .view-header__right {

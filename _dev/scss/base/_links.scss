@@ -126,6 +126,22 @@ a.icon-link {
   display: inline-block;
 }
 
+.btn-link {
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: underline;
+  color: $black;
+  background: transparent;
+  display: block;
+  white-space: nowrap;
+  transition: color $trans;
+
+  &:hover {
+    cursor: pointer;
+    color: $gray;
+  }
+}
+
 
 // ----------------------------------------
 // Links
