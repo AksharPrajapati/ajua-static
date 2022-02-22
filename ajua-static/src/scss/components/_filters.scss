@@ -2,7 +2,6 @@
 //
 // ---------------------------------------------------------------------
 
-
 .filter-trigger {
   width: 86px;
   min-width: 86px;
@@ -45,7 +44,6 @@
   }
 
   body.filters-open {
-
     .filters-wrap {
       transform: translate3d(0, 0, 0);
     }
@@ -53,13 +51,12 @@
 }
 
 @include start-at($header-breakpoint) {
-.filters-wrap {
+  .filters-wrap {
     .view-header {
       display: none;
     }
   }
 }
-
 
 .filter-group {
   position: relative;
@@ -71,7 +68,6 @@
     padding: 24px 0;
   }
 }
-
 
 .filter-group__title {
   padding-right: 90px;
@@ -90,7 +86,6 @@
 }
 
 .filter-group__expand {
-
   appearance: none;
   margin-top: 24px;
 
@@ -101,7 +96,6 @@
     margin-top: 0;
   }
 }
-
 
 // ----------------------------------------
 //
@@ -155,7 +149,7 @@
       min-width: 24px;
       height: 24px;
       z-index: 2;
-      border: 1px solid #C2C5C8;
+      border: 1px solid #c2c5c8;
       border-radius: 4px;
       background: transparent;
       cursor: pointer;
@@ -166,7 +160,7 @@
     }
 
     &:after {
-      background: url('./images/check.svg') center / auto no-repeat;
+      background: url("../../images/check.svg") center / auto no-repeat;
       transform: scale(0);
       transform-origin: center;
       transition: transform $trans;
