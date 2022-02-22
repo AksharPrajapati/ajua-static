@@ -1,7 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../../components/layout";
+import axios from "axios";
 
 function Business() {
+  const [merchant, setMerchant] = useState([]);
+  const [merchantReviews, setMerchantReviews] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://merchant-api.ajua.com/v0/merchant-profile?merchant_id=61cf1d955f9fb0a63fa41d82",
+        {
+          headers: {
+            Authentication: "52516d27-26b8-430f-b729-5c15fb999382",
+          },
+        }
+      )
+      .then((res) => {
+        setMerchant(res?.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    axios
+      .get(
+        "https://merchant-api.ajua.com/v0/get_reviews?merchant_id=61cf1d955f9fb0a63fa41d82",
+        {
+          headers: {
+            Authentication: "52516d27-26b8-430f-b729-5c15fb999382",
+          },
+        }
+      )
+      .then((res) => {
+        setMerchantReviews(res?.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <Layout>
       <business>
@@ -14,7 +52,7 @@ function Business() {
             <a class="business__logo" href="">
               <img src="/build/images/fpo/fpo-business-logo.png" />
             </a>
-            <h3>Mchana Coffee Shop</h3>
+            <h3>{merchant?.business_name}</h3>
 
             <div class="business__header__details">
               <rating-preview>
@@ -24,10 +62,15 @@ function Business() {
               </rating-preview>
 
               <business-category>
-                <span>[business category]</span>
+                <span>{`[ ${merchant?.ajua_account_details?.industry} ]`}</span>
               </business-category>
 
-              <address>18 Ajilete Street, Ogba Ikeja, Lagos Nigeria</address>
+              <address>
+                {" "}
+                {`${merchant?.ajua_account_details?.city || ""}, ${
+                  merchant?.ajua_account_details?.state || ""
+                }, ${merchant?.ajua_account_details?.country || ""}`}
+              </address>
             </div>
 
             <div class="business-header__social d-flex flex-items-center mt-3">
@@ -55,12 +98,7 @@ function Business() {
 
         <div class="business__about wrapper">
           <h3 class="h6">About</h3>
-          <p>
-            Mchana Coffee Shop specializes in sourcing, roasting and serving
-            Africa’s greatest coffees, from Kenya to Ethiopia (and beyond).
-            Visit our shop for a tasty cup of coffee, indulgent latte, or a
-            delicious and sweet Akara or Chin Chin from our bakery.
-          </p>
+          <p>{merchant?.business_description}</p>
         </div>
 
         <div class="business__photos wrapper">
@@ -124,89 +162,35 @@ function Business() {
             <span>100 reviews</span>
           </rating-preview>
           <reviews>
-            <review>
-              <review-header>
-                <review-customer>
-                  <figure>
-                    <img src="https://placeimg.com/80/80/people" />
-                  </figure>
-                  <div>
-                    <p class="review-customer-name">Lorem Ipsum</p>
-                    <p>Jan 27, 2022</p>
-                  </div>
-                </review-customer>
-                <review-rating>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                </review-rating>
-              </review-header>
-              <review-review>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua
-                </p>
-              </review-review>
-            </review>
-
-            <review>
-              <review-header>
-                <review-customer class="verified">
-                  <figure>
-                    <img src="https://placeimg.com/90/90/people" />
-                  </figure>
-                  <i class="ri-checkbox-circle-fill"></i>
-                  <div>
-                    <p class="review-customer-name">Dede Mabiaku</p>
-                    <p>Jan 27, 2022 • Verified</p>
-                  </div>
-                </review-customer>
-                <review-rating>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                </review-rating>
-              </review-header>
-              <review-review>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </review-review>
-            </review>
-
-            <review>
-              <review-header>
-                <review-customer class="verified">
-                  <figure>
-                    <img src="https://placeimg.com/90/90/people" />
-                  </figure>
-                  <i class="ri-checkbox-circle-fill"></i>
-                  <div>
-                    <p class="review-customer-name">Dede Mabiaku</p>
-                    <p>Jan 27, 2022 • Verified</p>
-                  </div>
-                </review-customer>
-                <review-rating>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                </review-rating>
-              </review-header>
-              <review-review>
-                <p>
-                  Consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                </p>
-              </review-review>
-            </review>
+            {merchantReviews[0]?.reviews?.map((review) => {
+              return (
+                <review>
+                  <review-header>
+                    <review-customer>
+                      <figure>
+                        <img src="https://placeimg.com/80/80/people" />
+                      </figure>
+                      <div>
+                        <p class="review-customer-name">{review?.name}</p>
+                        <p>{review?.created_at["$date"]}</p>
+                        {/* <p>Jan 27, 2022</p> */}
+                      </div>
+                    </review-customer>
+                    <review-rating>
+                      {[...Array(+review?.rating_value).keys()].map(() => (
+                        <i class="ri-star-fill"></i>
+                      ))}
+                      {[...Array(5 - +review?.rating_value)].map(() => (
+                        <i class="ri-star-line"></i>
+                      ))}
+                    </review-rating>
+                  </review-header>
+                  <review-review>
+                    <p>{review?.review}</p>
+                  </review-review>
+                </review>
+              );
+            })}
           </reviews>
 
           <a class="btn-outline mt-3" href="" data-modal="reviews-modal">
