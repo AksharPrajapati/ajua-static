@@ -12,7 +12,8 @@
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "sass": "^1.49.8",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@primer/css": "^13.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

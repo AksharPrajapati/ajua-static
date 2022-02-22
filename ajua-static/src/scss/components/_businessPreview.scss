@@ -2,8 +2,7 @@
 //
 // ---------------------------------------------------------------------
 
-.slider.slider--business {
-
+.slider--business {
   @include start-at($header-breakpoint) {
     width: 100%;
     overflow: hidden;
@@ -33,13 +32,13 @@ business-preview {
   overflow: hidden;
   border-radius: 8px;
   font-size: 12px;
-	width: 244px;
-	min-width: 244px;
-	height: auto;
-	margin-right: 16px;
+  width: 244px;
+  min-width: 244px;
+  height: auto;
+  margin-right: 16px;
 
   &:after {
-    content: '';
+    content: "";
     width: 100%;
     height: 100%;
     display: block;
@@ -47,7 +46,7 @@ business-preview {
     top: 0;
     left: 0;
     z-index: 4;
-    border: 1px solid #4171F3;
+    border: 1px solid #4171f3;
     // border-image-slice: 4;
     // border-width: 1px;
     // border-image-source: linear-gradient(to left, #4171F3, #922DE2);
@@ -56,18 +55,18 @@ business-preview {
     transition: opacity $trans;
   }
 
-	&:hover {
-		cursor: pointer;
+  &:hover {
+    cursor: pointer;
 
     &:after {
       opacity: 1;
     }
-	}
+  }
 
-	@include start-at($medium) {
-		min-width: 360px;
-		width: 360px;
-	}
+  @include start-at($medium) {
+    min-width: 360px;
+    width: 360px;
+  }
 }
 
 .business-preview__featured-image {
@@ -88,13 +87,13 @@ business-preview {
   }
 }
 
-.business-preview__content  {
+.business-preview__content {
   padding: 16px;
   border: 1px solid $border;
   border-top: none;
   border-radius: 0 0 8px 8px;
 
-	@include start-at($medium) {
+  @include start-at($medium) {
     padding: 24px;
   }
 
@@ -108,9 +107,7 @@ business-preview {
   }
 }
 
-
 search-results {
-
   business-preview {
     display: flex;
     width: 100%;
@@ -126,7 +123,7 @@ search-results {
     }
 
     &:after {
-      content: '';
+      content: "";
       width: 100%;
       height: 100%;
       display: block;
@@ -134,24 +131,24 @@ search-results {
       top: 0;
       left: 0;
       z-index: 4;
-      border: 1px solid #4171F3;
+      border: 1px solid #4171f3;
       border-radius: 8px;
       opacity: 0;
       transition: opacity $trans;
     }
 
-  	&:hover {
-  		cursor: pointer;
+    &:hover {
+      cursor: pointer;
 
       &:after {
         opacity: 1;
       }
-  	}
+    }
 
-  	@include start-at($medium) {
-  		min-width: 100%;
-  		width: 100%;
-  	}
+    @include start-at($medium) {
+      min-width: 100%;
+      width: 100%;
+    }
   }
 
   .business-preview__featured-image {
@@ -177,7 +174,7 @@ search-results {
     }
   }
 
-  .business-preview__content  {
+  .business-preview__content {
     border: none;
     padding: 0;
     margin: 0;

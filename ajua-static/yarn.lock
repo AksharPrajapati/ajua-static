@@ -1401,6 +1401,20 @@
     schema-utils "^3.0.0"
     source-map "^0.7.3"
 
+"@primer/css@^13.2.0":
+  version "13.2.0"
+  resolved "https://registry.yarnpkg.com/@primer/css/-/css-13.2.0.tgz#11c2f425d1fa17397d3b0abc28de95419781a1ff"
+  integrity sha512-if/GnOCeMeFZAC3HWnoeQCy0leZhJriGbxDp8+uH7wG18JmNU1ZAAr24KLF+pZaTclCKxWe7Y1NoZwym/chmEg==
+  dependencies:
+    "@primer/octicons" "^9.1.1"
+
+"@primer/octicons@^9.1.1":
+  version "9.6.0"
+  resolved "https://registry.yarnpkg.com/@primer/octicons/-/octicons-9.6.0.tgz#e195f2dd5f30b6918ad5d8ff224c12f778d02408"
+  integrity sha512-B5Wzk5izRXXz0JqEXJkVUtqhCXSpUKgqYkVwegMkp5sziBW+ksd9LPbONlCWyyLODwf9GsI2sBXekR7m+JJDBw==
+  dependencies:
+    object-assign "^4.1.1"
+
 "@rollup/plugin-babel@^5.2.0":
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-babel/-/plugin-babel-5.3.0.tgz#9cb1c5146ddd6a4968ad96f209c50c62f92f9879"
