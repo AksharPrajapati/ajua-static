@@ -32,6 +32,10 @@ function Home() {
       });
   }, []);
 
+  const handleClick = (businessId) => {
+    navigate(`business/${businessId}`);
+  };
+
   return (
     <Layout>
       <div className="banner-cats">
@@ -88,7 +92,10 @@ function Home() {
         <div className="slider slider--business">
           {merchants.map((item, index) => {
             return (
-              <business-preview key={index}>
+              <business-preview
+                key={index}
+                onClick={() => handleClick(item?.id["$oid"])}
+              >
                 <figure className="business-preview__featured-image">
                   <img
                     // src={item?.ajua_account_details?.profile_photo}

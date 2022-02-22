@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../../components/layout";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 function Business() {
+  const { businessId } = useParams();
   const [merchant, setMerchant] = useState([]);
   const [merchantReviews, setMerchantReviews] = useState([]);
 
   useEffect(() => {
     axios
       .get(
-        "https://merchant-api.ajua.com/v0/merchant-profile?merchant_id=61cf1d955f9fb0a63fa41d82",
+        `https://merchant-api.ajua.com/v0/merchant-profile?merchant_id=${businessId}`,
         {
           headers: {
             Authentication: "52516d27-26b8-430f-b729-5c15fb999382",
@@ -25,7 +27,7 @@ function Business() {
 
     axios
       .get(
-        "https://merchant-api.ajua.com/v0/get_reviews?merchant_id=61cf1d955f9fb0a63fa41d82",
+        `https://merchant-api.ajua.com/v0/get_reviews?merchant_id=${businessId}`,
         {
           headers: {
             Authentication: "52516d27-26b8-430f-b729-5c15fb999382",
