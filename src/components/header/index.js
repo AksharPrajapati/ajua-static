@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../images/Ajua-logo.svg";
+import logo from "../../common/images/Ajua-logo.svg";
 
 function Header() {
   return (

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../../components/layout";
-import localBusinessImage from "../../images/marketing/local-business.png";
-import ReviewsImage from "../../images/marketing/reviews.png";
-import WhatsAppImage from "../../images/marketing/whatsapp.svg";
+import localBusinessImage from "../../common/images/marketing/local-business.png";
+import ReviewsImage from "../../common/images/marketing/reviews.png";
+import WhatsAppImage from "../../common/images/marketing/whatsapp.svg";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 

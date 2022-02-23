@@ -1,5 +1,5 @@
 import React from "react";
-import AjuaIcon from "../../images/Ajua-icon.svg";
+import AjuaIcon from "../../common/images/Ajua-icon.svg";
 
 function Footer() {
   return (
