@@ -40,7 +40,7 @@ body {
 }
 
 .view-header-lg__inner {
-  // @include wrapper;
+  @include wrapper;
   display: flex;
   align-items: center;
   justify-content: space-between;

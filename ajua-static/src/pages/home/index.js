@@ -118,9 +118,9 @@ function Home() {
                   </business-category>
 
                   <address>
-                    {`${item?.ajua_account_details?.city || ""}, ${
-                      item?.ajua_account_details?.state || ""
-                    }, ${item?.ajua_account_details?.country || ""}`}
+                    {`${item?.ajua_account_details?.state || ""}, ${
+                      item?.ajua_account_details?.country || ""
+                    }`}
                   </address>
                 </div>
               </business-preview>

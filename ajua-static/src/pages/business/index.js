@@ -40,7 +40,7 @@ function Business() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [businessId]);
 
   return (
     <Layout>
@@ -69,9 +69,9 @@ function Business() {
 
               <address>
                 {" "}
-                {`${merchant?.ajua_account_details?.city || ""}, ${
-                  merchant?.ajua_account_details?.state || ""
-                }, ${merchant?.ajua_account_details?.country || ""}`}
+                {`${merchant?.ajua_account_details?.state || ""}, ${
+                  merchant?.ajua_account_details?.country || ""
+                }`}
               </address>
             </div>
 
@@ -174,8 +174,15 @@ function Business() {
                       </figure>
                       <div>
                         <p class="review-customer-name">{review?.name}</p>
-                        <p>{review?.created_at["$date"]}</p>
-                        {/* <p>Jan 27, 2022</p> */}
+                        <p>
+                          {new Date(
+                            review?.created_at["$date"]
+                          ).toLocaleDateString("en-US", {
+                            day: "numeric",
+                            month: "short",
+                            year: "numeric",
+                          }) || "-"}
+                        </p>
                       </div>
                     </review-customer>
                     <review-rating>
