@@ -47,31 +47,46 @@ function Business() {
       <business>
         <header class="business__header">
           <figure class="business__featured-image">
-            <img src="/build/images/fpo/fpo.png" />
+            <img
+              src={
+                merchant?.cover_photo_web
+                  ? `data:image/png;base64,${merchant?.cover_photo_web}`
+                  : ""
+              }
+            />
           </figure>
 
           <div class="business__header-content wrapper">
             <a class="business__logo" href="">
-              <img src="/build/images/fpo/fpo-business-logo.png" />
+              <img
+                src={
+                  merchant?.profile_photo_web
+                    ? `data:image/png;base64,${merchant?.profile_photo_web}`
+                    : ""
+                }
+              />
             </a>
             <h3>{merchant?.business_name}</h3>
 
             <div class="business__header__details">
               <rating-preview>
                 <i class="ri-star-fill"></i>
-                <span>4.9</span>
-                <a href="#">100 reviews</a>
+                <span>{merchant?.average_rating || 0}</span>
+                <a href="#">{`${merchant?.total_reviews || 0} reviews`}</a>
               </rating-preview>
 
               <business-category>
-                <span>{`[ ${merchant?.ajua_account_details?.industry} ]`}</span>
+                <span>{`[ ${
+                  merchant?.ajua_account_details?.industry || ""
+                } ]`}</span>
               </business-category>
 
               <address>
-                {" "}
-                {`${merchant?.ajua_account_details?.state || ""}, ${
-                  merchant?.ajua_account_details?.country || ""
-                }`}
+                {merchant?.ajua_account_details?.state
+                  ? `${merchant?.ajua_account_details?.state || ""}, ${
+                      merchant?.ajua_account_details?.country || ""
+                    }`
+                  : merchant?.ajua_account_details?.country || ""}
               </address>
             </div>
 
@@ -103,7 +118,7 @@ function Business() {
           <p>{merchant?.business_description}</p>
         </div>
 
-        <div class="business__photos wrapper">
+        {/* <div class="business__photos wrapper">
           <h3 class="h6">Photos</h3>
           <ul class="business__photo-gallery">
             <li>
@@ -155,13 +170,13 @@ function Business() {
               <img src="https://placeimg.com/460/449/any" />
             </li>
           </ul>
-        </div>
+        </div> */}
 
         <div class="business__reviews wrapper">
           <rating-preview>
             <i class="ri-star-fill"></i>
-            <span>4.9</span>
-            <span>100 reviews</span>
+            <span>{merchant?.average_rating || 0}</span>
+            <span>{`${merchant?.total_reviews || 0} reviews`}</span>
           </rating-preview>
           <reviews>
             {merchantReviews[0]?.reviews?.map((review) => {

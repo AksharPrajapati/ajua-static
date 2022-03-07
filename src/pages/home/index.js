@@ -9,23 +9,19 @@ import { useNavigate } from "react-router-dom";
 function Home() {
   const navigate = useNavigate();
   const [merchants, setMerchants] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     axios
-      .get(
-        "https://merchant-api.ajua.com/v0/merchant-profile?merchant_id=61cf1d955f9fb0a63fa41d82",
-        {
-          headers: {
-            Authentication: "52516d27-26b8-430f-b729-5c15fb999382",
-          },
-        }
-      )
+      .get("https://merchant-api.ajua.com/v0/fetch_merchants", {
+        headers: {
+          Authentication: "52516d27-26b8-430f-b729-5c15fb999382",
+        },
+      })
       .then((res) => {
-        let response = [];
-        for (let i = 0; i < 8; i++) {
-          response.push(res?.data);
-        }
-        setMerchants(response);
+        setMerchants(res?.data);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -90,42 +86,58 @@ function Home() {
         <h3 className="h6">Top Rated businesses</h3>
 
         <div className="slider slider--business">
-          {merchants.map((item, index) => {
-            return (
-              <business-preview
-                key={index}
-                onClick={() => handleClick(item?.id["$oid"])}
-              >
-                <figure className="business-preview__featured-image">
-                  <img
-                    // src={item?.ajua_account_details?.profile_photo}
-                    src="https://placeimg.com/480/480/tech"
-                    alt={item?.full_name}
-                  />
-                </figure>
+          {!loading ? (
+            merchants.map((item, index) => {
+              return (
+                <business-preview
+                  key={index}
+                  onClick={() => handleClick(item?.id["$oid"])}
+                >
+                  <figure className="business-preview__featured-image">
+                    <img
+                      // src={item?.ajua_account_details?.profile_photo}
+                      src={
+                        item?.cover_photo_web?.length
+                          ? `data:image/png;base64,${item?.cover_photo_web}`
+                          : "https://placeimg.com/480/480/tech"
+                      }
+                      alt={item?.full_name}
+                    />
+                  </figure>
 
-                <div className="business-preview__content">
-                  <h4>{item?.business_name}</h4>
+                  <div className="business-preview__content">
+                    <h4>{item?.business_name}</h4>
 
-                  <rating-preview>
-                    <i className="ri-star-fill"></i>
-                    <span>4.9</span>
-                    <a href="#reviews">100 reviews</a>
-                  </rating-preview>
+                    <rating-preview>
+                      <i className="ri-star-fill"></i>
+                      <span>{item?.average_rating || 0}</span>
+                      <a href="#reviews">{`${
+                        item?.total_reviews || 0
+                      } reviews`}</a>
+                    </rating-preview>
 
-                  <business-category>
-                    <span>{`[ ${item?.ajua_account_details?.industry} ]`}</span>
-                  </business-category>
+                    <business-category>
+                      <span>
+                        {item?.ajua_account_details?.industry
+                          ? `[ ${item?.ajua_account_details?.industry} ]`
+                          : ""}
+                      </span>
+                    </business-category>
 
-                  <address>
-                    {`${item?.ajua_account_details?.state || ""}, ${
-                      item?.ajua_account_details?.country || ""
-                    }`}
-                  </address>
-                </div>
-              </business-preview>
-            );
-          })}
+                    <address>
+                      {item?.ajua_account_details?.state
+                        ? `${item?.ajua_account_details?.state || ""}, ${
+                            item?.ajua_account_details?.country || ""
+                          }`
+                        : item?.ajua_account_details?.country || ""}
+                    </address>
+                  </div>
+                </business-preview>
+              );
+            })
+          ) : (
+            <span style={{ margin: "5em 40em" }}>Loading...</span>
+          )}
 
           <span className="spacer"></span>
           <span className="spacer"></span>
