@@ -21,6 +21,7 @@
 }
 
 .icon-circle {
+  position: relative;
   width: 48px;
   height: 48px;
   min-width: 48px;
@@ -33,7 +34,30 @@
   i {
     font-size: 20px;
     color: $white;
+    position: relative;
+    z-index: 2;
   }
+
+  &.icon-cirlce--outline {
+
+    i {
+      color: $purple;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 46px;
+      height: 46px;
+      background: white;
+      top: 1px;
+      left: 1px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+  }
+
 }
 
 .icon-cirlce--green {
@@ -45,6 +69,8 @@
 .icon-cirlce--blue {
   background: linear-gradient(90deg, #4171F3 4.17%, #922DE2 100%);
 }
+
+
 
 .text-center-md {
 
