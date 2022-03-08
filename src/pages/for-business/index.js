@@ -1,5 +1,9 @@
 import React from "react";
 import Layout from "../../components/layout";
+import ajuaBusinessGraphic from "../../common/images/marketing/ajua-business-graphic.png";
+import customers from "../../common/images/marketing/customers.png";
+import connect from "../../common/images/marketing/connect.png";
+import grow from "../../common/images/marketing/grow.png";
 
 function ForBusiness() {
   return (
@@ -28,10 +32,7 @@ function ForBusiness() {
             </div>
           </div>
           <figure className="market-hero__img">
-            <img
-              src="/build/images/marketing/ajua-business-graphic.png"
-              alt="customers"
-            />
+            <img src={ajuaBusinessGraphic} alt="customers" />
           </figure>
         </div>
       </div>
@@ -39,7 +40,7 @@ function ForBusiness() {
       <div className="wrapper py-7">
         <div className="media-object">
           <figure className="media-object__media">
-            <img src="/build/images/marketing/customers.png" alt="customers" />
+            <img src={customers} alt="customers" />
           </figure>
           <div className="media-object__content">
             <div>
@@ -65,7 +66,7 @@ function ForBusiness() {
       <div className="wrapper py-7">
         <div className="media-object media-object--flip">
           <figure className="media-object__media">
-            <img src="/build/images/marketing/connect.png" alt="customers" />
+            <img src={connect} alt="customers" />
           </figure>
           <div className="media-object__content">
             <div>
@@ -91,7 +92,7 @@ function ForBusiness() {
       <div className="wrapper py-7">
         <div className="media-object">
           <figure className="media-object__media">
-            <img src="/build/images/marketing/grow.png" alt="customers" />
+            <img src={grow} alt="customers" />
           </figure>
           <div className="media-object__content">
             <div>
