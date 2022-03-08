@@ -114,6 +114,30 @@
 //
 // ----------------------------------------
 
-site-search {
 
+.market-hero {
+  width: 100%;
+  padding: 128px 0;
+  background: $gradient-blue;
+  color: $white;
+  position: relative;
+  .wrapper {
+    position: relative;
+  }
+}
+
+.market-hero__content {
+  max-width: 600px;
+}
+
+.market-hero__img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate3d(0, -36px, 0);
+  max-width: calc(100% - 624px);
+
+  @include stop-at($large) {
+    display: none;
+  }
 }

@@ -1,7 +1,10 @@
 import React from "react";
 import logo from "../../common/images/Ajua-logo.svg";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
+
   return (
     <header className="site-header">
       <div className="view-header">
@@ -58,7 +61,9 @@ function Header() {
                 <a href="">Home</a>
               </li>
               <li>
-                <a href="">For Business</a>
+                <a href="" onClick={() => navigate(`for-business`)}>
+                  For Business
+                </a>
               </li>
               <li>
                 <a href="">About</a>
@@ -108,7 +113,9 @@ function Header() {
               <a href="">Home</a>
             </li>
             <li>
-              <a href="">For Business</a>
+              <a href="" onClick={() => navigate(`/for-business`)}>
+                For Business
+              </a>
             </li>
             <li>
               <a href="">About</a>

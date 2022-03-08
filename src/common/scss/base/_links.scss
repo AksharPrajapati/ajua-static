@@ -14,7 +14,7 @@
   height: 48px;
   text-align: center;
   background: transparent;
-
+  overflow: hidden;
   border-radius: 8px;
   font-style: normal;
   font-weight: 500;
@@ -22,12 +22,25 @@
   line-height: 100%;
   letter-spacing: -0.01em;
   transition: background $trans, color $trans, border-color $trans;
-
+  background: $purple;
   color: $white;
-  background: linear-gradient(90deg, #4171F3 4.17%, #922DE2 100%);
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #4171F3 4.17%, #922DE2 100%);
+    z-index: -1;
+    transition: opacity $trans;
+  }
 
 
   span {
+    position: relative;
+    z-index: 2;
     display: block;
 
     &:before,
@@ -36,11 +49,22 @@
     }
   }
 
+  span + i {
+    margin-left: 4px;
+  }
+  i + span {
+    margin-left: 4px;
+  }
+
   &:hover {
     cursor: pointer;
     color: $white;
-    background: $blue;
-    border-color: $blue;
+    background: #4171F3;
+    border-color: #4171F3;
+
+    &:after {
+      opacity: 0;
+    }
 
     svg,
     i {
@@ -72,6 +96,31 @@
   background: transparent;
   color: $gray;
   border: 1px solid $gray;
+
+  &:after {
+    display: none;
+  }
+}
+
+.btn--white {
+  background: rgba($white, .39);
+
+  &:hover {
+    background: rgba($white, .19);
+  }
+
+  &:after {
+    display: none;
+  }
+}
+
+.btn.btn--no-hover {
+
+  &:hover {
+    i {
+      transform: none;
+    }
+  }
 }
 
 
@@ -98,6 +147,13 @@
 
   svg:first-child {
     margin-right: 12px;
+  }
+
+  span + i {
+    margin-left: 4px;
+  }
+  i + span {
+    margin-left: 4px;
   }
 }
 
