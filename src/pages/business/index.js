@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Layout from "../../components/layout";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import BusinessFallback from "../../common/images/fallback/business-fallback.jpeg";
+import UserFallback from "../../common/images/fallback/user-fallback.png";
 
 function Business() {
   const { businessId } = useParams();
@@ -51,7 +53,7 @@ function Business() {
               src={
                 merchant?.cover_photo_web
                   ? `data:image/png;base64,${merchant?.cover_photo_web}`
-                  : ""
+                  : BusinessFallback
               }
             />
           </figure>
@@ -62,7 +64,7 @@ function Business() {
                 src={
                   merchant?.profile_photo_web
                     ? `data:image/png;base64,${merchant?.profile_photo_web}`
-                    : ""
+                    : UserFallback
                 }
               />
             </a>
@@ -76,9 +78,11 @@ function Business() {
               </rating-preview>
 
               <business-category>
-                <span>{`[ ${
-                  merchant?.ajua_account_details?.industry || ""
-                } ]`}</span>
+                <span>
+                  {merchant?.ajua_account_details?.industry
+                    ? `[ ${merchant?.ajua_account_details?.industry} ]`
+                    : ""}
+                </span>
               </business-category>
 
               <address>

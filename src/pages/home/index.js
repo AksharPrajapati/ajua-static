@@ -3,6 +3,7 @@ import Layout from "../../components/layout";
 import localBusinessImage from "../../common/images/marketing/local-business.png";
 import ReviewsImage from "../../common/images/marketing/reviews.png";
 import WhatsAppImage from "../../common/images/marketing/whatsapp.svg";
+import BusinessFallback from "../../common/images/fallback/business-fallback.jpeg";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -99,7 +100,7 @@ function Home() {
                       src={
                         item?.cover_photo_web?.length
                           ? `data:image/png;base64,${item?.cover_photo_web}`
-                          : "https://placeimg.com/480/480/tech"
+                          : BusinessFallback
                       }
                       alt={item?.full_name}
                     />
