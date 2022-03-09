@@ -59,7 +59,7 @@ function Business() {
           </figure>
 
           <div class="business__header-content wrapper">
-            <a class="business__logo" href="">
+            <a class="business__logo" href="/">
               <img
                 src={
                   merchant?.profile_photo_web
@@ -80,7 +80,7 @@ function Business() {
               <business-category>
                 <span>
                   {merchant?.ajua_account_details?.industry
-                    ? `[ ${merchant?.ajua_account_details?.industry} ]`
+                    ? `${merchant?.ajua_account_details?.industry}`
                     : ""}
                 </span>
               </business-category>
@@ -97,19 +97,19 @@ function Business() {
             <div class="business-header__social d-flex flex-items-center mt-3">
               <a
                 class="icon-circle icon-cirlce--green mr-4 mr-lg-0 ml-lg-4"
-                href=""
+                href="/"
               >
                 <i class="ri-whatsapp-fill"></i>
               </a>
               <a
                 class="icon-circle icon-cirlce--pink mr-4 mr-lg-0 ml-lg-4"
-                href=""
+                href="/"
               >
                 <i class="ri-pencil-fill"></i>
               </a>
               <a
                 class="icon-circle icon-cirlce--blue mr-4 mr-lg-0 ml-lg-4"
-                href=""
+                href="/"
               >
                 <i class="ri-share-fill"></i>
               </a>
@@ -221,8 +221,8 @@ function Business() {
             })}
           </reviews>
 
-          <a class="btn-outline mt-3" href="" data-modal="reviews-modal">
-            Show all <span>XXX</span> reviews
+          <a class="btn-outline mt-3" href="/" data-modal="reviews-modal">
+            Show all reviews
           </a>
         </div>
       </business>

@@ -1,21 +1,20 @@
 import React from "react";
 import logo from "../../common/images/Ajua-logo.svg";
-import { useNavigate } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
+import MobileNav from "./nav";
 
 function Header() {
-  const navigate = useNavigate();
-
   return (
     <header className="site-header">
       <div className="view-header">
         <div className="view-header__left">
-          <a href="/" className="js-open-nav">
+          <a href="/" className="js-open-nav" onClick={MobileNav}>
             <i className="ri-menu-line"></i>
           </a>
         </div>
 
         <div className="view-header__featured">
-          <a className="site-logo" href="">
+          <a className="site-logo" href="/">
             <svg
               width="36"
               height="32"
@@ -58,33 +57,28 @@ function Header() {
           <div>
             <ul>
               <li>
-                <a href="">Home</a>
+                <NavLink to="/">
+                  Top Rated
+                </NavLink>
               </li>
               <li>
-                <a href="" onClick={() => navigate(`for-business`)}>
+                <NavLink to="/for-business">
                   For Business
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="">About</a>
-              </li>
-              <li>
-                <a href="">Suggest a Business</a>
-              </li>
-              <li>
-                <a href="">Contact</a>
+                <NavLink to="/contact">
+                  Contact
+                </NavLink>
               </li>
             </ul>
             <hr />
+
             <ul>
               <li>
-                <a href="">Terms</a>
-              </li>
-              <li>
-                <a href="">Privacy</a>
-              </li>
-              <li>
-                <a href="">Cookies</a>
+                <NavLink to="/contact">
+                  Privacy Policy
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -94,7 +88,7 @@ function Header() {
       <div className="view-header-lg">
         <div className="view-header-lg__inner">
           <div className="view-header-lg__left">
-            <a className="site-logo" href="">
+            <a className="site-logo" href="/">
               <img src={logo} alt="Ajua" />
               <h2 className="sr-only">Ajua</h2>
             </a>
@@ -110,15 +104,19 @@ function Header() {
 
           <ul className="view-header-lg__nav">
             <li>
-              <a href="">Home</a>
+              <NavLink to="/">
+                Top Rated
+              </NavLink>
             </li>
             <li>
-              <a href="" onClick={() => navigate(`/for-business`)}>
+              <NavLink to="/for-business">
                 For Business
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="">About</a>
+              <NavLink to="/contact">
+                Contact
+              </NavLink>
             </li>
           </ul>
         </div>

@@ -305,35 +305,6 @@ img {
   }
 }
 
-del {
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-
-  &:before {
-    content: '';
-    width: calc(100% + 10px);
-    height: calc(100% + 10px);
-    display: block;
-    position: absolute;
-    background: url('./images/svgs/scribble.svg') center / 100% auto no-repeat;
-    z-index: 2;
-    top: 0;
-    left: -5px;
-  }
-
-  &:after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    background: url('./images/svgs/redacted.svg') center / auto no-repeat;
-    z-index: 3;
-    top: 0;
-    left: 0;
-  }
-}
 
 // ----------------------------------------
 // Media

@@ -249,3 +249,34 @@ small {
   color: #A1A1A1;
   margin-top: 6px;
 }
+
+
+.rte {
+
+  p + h1,
+  p + h2,
+  p + h3,
+  p + h4 {
+    margin-top: 36px;
+  }
+
+  p + h5,
+  p + h6 {
+    margin-top: 24px;
+  }
+
+  ul,
+  ol {
+    list-style-type: disc;
+    margin: 16px 0;
+    padding-left: 24px;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  li + li {
+    margin-top: 8px;
+  }
+}

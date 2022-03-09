@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../../components/layout";
-import localBusinessImage from "../../common/images/marketing/local-business.png";
+import HeroImage from "../../common/images/marketing/ajua-hero.jpeg";
+import LocalBusinessImage from "../../common/images/marketing/local-business.png";
 import ReviewsImage from "../../common/images/marketing/reviews.png";
 import WhatsAppImage from "../../common/images/marketing/whatsapp.svg";
 import BusinessFallback from "../../common/images/fallback/business-fallback.jpeg";
@@ -37,19 +38,19 @@ function Home() {
     <Layout>
       <div className="banner-cats">
         <div className="slider slider--cats">
-          <a className="cat-pill" href="">
+          <a className="cat-pill" href="/">
             Restaurants
           </a>
-          <a className="cat-pill" href="">
+          <a className="cat-pill" href="/">
             Hotels
           </a>
-          <a className="cat-pill" href="">
+          <a className="cat-pill" href="/">
             Beauty Care
           </a>
-          <a className="cat-pill" href="">
+          <a className="cat-pill" href="/">
             Retail
           </a>
-          <a className="cat-pill" href="">
+          <a className="cat-pill" href="/">
             Banking
           </a>
         </div>
@@ -69,13 +70,13 @@ function Home() {
             </div>
           </div>
           <figure className="banner__img">
-            <img src="https://placeimg.com/1480/680/people" />
+            <img src={HeroImage} alt="man using Ajua on his phone" />
           </figure>
 
           <div className="banner__ft">
             <p>
               Are you a business owner?{" "}
-              <a href="">
+              <a href="/for-business">
                 Join Our Network <i className="ri-arrow-right-line"></i>
               </a>
             </p>
@@ -145,7 +146,7 @@ function Home() {
         </div>
 
         <div className="d-flex flex-justify-end">
-          <a className="link-gradient" href="">
+          <a className="link-gradient" href="/">
             <span>See more top rated</span>
             <i className="ri-arrow-right-line"></i>
           </a>
@@ -164,19 +165,19 @@ function Home() {
         <div className="d-flex mt-4">
           <div className="col-4 pr-2">
             <figure className="img-square mb-2 mb-lg-4">
-              <img src={localBusinessImage} />
+              <img src={LocalBusinessImage} alt="Find local businesses" />
             </figure>
             <p className="font-weight-500">Find local businesses</p>
           </div>
           <div className="col-4 px-1">
             <figure className="img-square mb-2 mb-lg-4">
-              <img src={ReviewsImage} />
+              <img src={ReviewsImage} alt="Read and leave reviews" />
             </figure>
             <p className="font-weight-500">Read and leave reviews</p>
           </div>
           <div className="col-4 pl-2">
             <figure className="img-square mb-2 mb-lg-4">
-              <img src={WhatsAppImage} />
+              <img src={WhatsAppImage} alt="Engage on WhatsApp" />
             </figure>
             <p className="font-weight-500">Engage on WhatsApp</p>
           </div>

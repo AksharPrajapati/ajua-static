@@ -20,7 +20,7 @@ function ForBusiness() {
             <div className="d-md-flex mt-4">
               <a
                 className="btn btn--no-hover btn--white mr-4 mb-4 mb-md-0"
-                href=""
+                href="/"
               >
                 <i className="ri-android-fill" style={{ fontSize: "16px" }}></i>
                 <span>Download for Android</span>
@@ -40,7 +40,7 @@ function ForBusiness() {
       <div className="wrapper py-7">
         <div className="media-object">
           <figure className="media-object__media">
-            <img src={customers} alt="customers" />
+            <img src={customers} alt="Find customers" />
           </figure>
           <div className="media-object__content">
             <div>
@@ -54,7 +54,7 @@ function ForBusiness() {
                 ads to optimize and continue to find more customers and the
                 right ones.
               </p>
-              <a className="btn btn--no-hover mt-4" href="">
+              <a className="btn btn--no-hover mt-4" href="/">
                 <i className="ri-android-fill" style={{ fontSize: "16px" }}></i>
                 <span>Download for Android</span>
               </a>
@@ -66,7 +66,7 @@ function ForBusiness() {
       <div className="wrapper py-7">
         <div className="media-object media-object--flip">
           <figure className="media-object__media">
-            <img src={connect} alt="customers" />
+            <img src={connect} alt="Connect with people" />
           </figure>
           <div className="media-object__content">
             <div>
@@ -80,7 +80,7 @@ function ForBusiness() {
                 reviews from your actual customers to build online credibility
                 and SEO.
               </p>
-              <a className="btn btn--no-hover mt-4" href="">
+              <a className="btn btn--no-hover mt-4" href="/">
                 <i className="ri-android-fill" style={{ fontSize: "16px" }}></i>
                 <span>Download for Android</span>
               </a>
@@ -92,7 +92,7 @@ function ForBusiness() {
       <div className="wrapper py-7">
         <div className="media-object">
           <figure className="media-object__media">
-            <img src={grow} alt="customers" />
+            <img src={grow} alt="Grow your business" />
           </figure>
           <div className="media-object__content">
             <div>
@@ -106,7 +106,7 @@ function ForBusiness() {
                 chatbots and manage your entire customer service experience
                 without lifting a finger.
               </p>
-              <a className="btn btn--no-hover mt-4" href="">
+              <a className="btn btn--no-hover mt-4" href="/">
                 <i className="ri-android-fill" style={{ fontSize: "16px" }}></i>
                 <span>Download for Android</span>
               </a>
