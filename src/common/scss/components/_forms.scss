@@ -2,39 +2,35 @@
 //  Form Styles
 // ---------------------------------------------------------------------
 
-$form-height: 48px;
+.main-contact {
+  width: 816px;
+  margin: 0 auto;
 
-.subscribe-form,
-.widget_blog_subscription form,
-.wpcf7-form {
-  position: relative;
-  display: block;
-  //margin: 28px 0 0;
-
-  input:focus {
-    outline: 0;
+  label {
+    margin-bottom: 4px;
+    display: block
   }
 
-  .mc-field-group,
-  .field-group {
-    width: 100%;
+  .form-field {
+    position: relative;
+    margin-bottom: 24px;
   }
 
+  $input-height: 44px;
 
   input[type="email"],
   input[type="text"],
+  input[type="tel"],
   textarea {
     display: block;
     background-color: transparent;
     width: 100%;
-    height: $form-height;
-    border: none;
-    border-radius: 0;
-    border-bottom: 1px solid $black;
-    padding-left: 0;
-    padding-right: 24px;
-    font-size: 16px;
-    font-weight: 500;
+    height: $input-height;
+    border-radius: 4px;
+    border: 1px solid $form-border;
+    padding: 0 12px;
+    font-size: 14px;
+    font-weight: 400;
     color: $black;
 
     @include stop-at($header-breakpoint) {
@@ -44,8 +40,9 @@ $form-height: 48px;
   }
 
   textarea {
-    height: 120px;
-    border: 1px solid $black;
+    height: 192px;
+    border: 1px solid $form-border;
+    border-radius: 4px;
     padding: 12px;
   }
 
@@ -54,84 +51,24 @@ $form-height: 48px;
     @include btn;
     border: none;
     appearance: none;
-    display: flex;
-    align-content: center !important;
-    background: $black;
-    margin-top: 18px;
-
-    &:after {
-      content: '';
-      display: block;
-      width: 10px;
-      height: 10px;
-      margin-left: 8px;
-      background: url('./images/svgs/arrow-right.svg') center / cover no-repeat;
-      transition: transform $trans;
-    }
 
     &:hover,
     &:active,
     &:focus {
       cursor: pointer;
       outline: none;
-
-      &:after {
-        transform: translate3d(3px, 0, 0);
-      }
     }
   }
-}
 
-.wpcf7-response-output {
-  border: none !important;
-  color: $black;
-  font-weight: bold;
-  padding: 12px !important;
-  margin: 0 !important;
-  background: $error;
 }
-
-.mce_inline_error {
-  display: none;
-}
-#mc_embed_signup .mce_inline_error + .mce_inline_error,
-#mce-success-response {
-  display: block;
-  position: absolute;
-  bottom: -44px;
-  left: 0;
-  background: transparent !important;
-  color: $error !important;
-  font-weight: 500!important;
-  margin: 0 !important;
-  padding: 8px 0 !important;
-  font-size: 14px;
-}
-
-#mce-success-response {
-  color: $green !important;
-}
-
-.wpcf7-form {
-  label {
-    @include visually-hidden;
-  }
-}
-
 
 // ----------------------------------------
 // Placeholder Styles
 // ----------------------------------------
 
 @mixin placeholder-styles {
-  color: $black;
   opacity: 1;
-  font-weight: 500;
   transition: opacity $transition;
-
-  @include stop-at(500px) {
-    font-size: 14px;
-  }
 }
 
 ::-webkit-input-placeholder {
@@ -169,219 +106,76 @@ input:focus {
 // ---------------------------------------------------------------------
 
 
-#eloquaForm {
-  text-align: left;
-}
-
-.text-error {
-  color: $error;
-}
-
-.form-control-invalid-text {
-  display: none;
-  font-size: 13px;
-  color: $white;
-  position:absolute;
-  top: calc(100% + 4px);
-  left: 0;
-}
-
-#eloquaForm {
-
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  select,
-  textarea {
-    display: block;
-    width: 100%;
-    height: 44px;
-    padding: 0;
-    border-radius: 0;
-    color: $black;
-    background: transparent;
-    border-bottom: 1px solid $white;
-    border-radius: 0;
-    font-size: 16px;
-    font-weight: 500;
-
-    &:focus,
-    &:active {
-      outline: none;
-    }
-  }
-
-  button {
-    max-width: 200px;
-    margin: 16px 0 0;
-  }
-
-  label {
-    display: block;
-    margin: 0;
-    position: relative;
-    z-index: -1;
-    left: 0;
-    transform: translate3d(0,34px,0);
-    transition: transform $trans;
-  }
-
-
-  .form-group {
-    margin-bottom: 24px;
-    position: relative;
-    z-index: 1;
-
-    &:after {
-      content: '';
-      width: 100%;
-      height: 2px;
-      background: red;
-      display: block;
-      position: absolute;
-      bottom: 0;
-      opacity: 0;
-      transition: opacity 0.4s ease-in-out;
-    }
-
-    &.is-active {
-
-      label {
-        transform: translate3d(0,0,0);
-      }
-      &:after {
-        opacity: 1;
-      }
-    }
-
-    &.error {
-
-      &:after {
-        background: $error;
-        opacity: 1;
-      }
-
-      .form-control-invalid-text {
-        display: block;
-      }
-    }
-  }
-}
-
-#eloquaForm .checkbox-wrap {
-  margin-top: 8px;
-  display: flex;
-
-  &:after {
-    display: none;
-  }
-
-  input {
-    margin-top: 4px;
-    margin-right: 12px;
-  }
-
-  label {
-    letter-spacing: -0.05em;
-    transform: translate3d(0,0,0) !important;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-}
-
-#eloquaForm .select-wrap {
-  position: relative;
-  z-index: 2;
-
-  &:before {
-    content: '';
-    width: 12px;
-    height: 7px;
-    display: block;
-    position: absolute;
-    right: 12px;
-    bottom: 19px;
-    background: url('../img/svgs/chevron-down.svg') center / cover no-repeat;
-  }
-
-  select {
-    appearance: none;
-  }
-}
-
-
 
 // ----------------------------------------
 // Review form
 // ----------------------------------------
-
-.ratings {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-
-  input {
-    @include visually-hidden;
-  }
-
-  label {
-    position: relative;
-    z-index: 1;
-    width: 36px;
-    height: 36px;
-    font-size: 0;
-    text-indent: -9999px;
-    margin: 8px;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    &:before,
-    &:after {
-      content: '';
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: block;
-      position: absolute;
-      transition: opacity 0.3s ease-in-out;
-    }
-
-    &:before {
-      z-index: 1;
-      background: url('../img/svgs/star-outline.svg') center / cover no-repeat;
-    }
-
-    &:after {
-      opacity: 0;
-      z-index: 2;
-      background: url('../img/svgs/star.svg') center / cover no-repeat;
-    }
-
-    &.is-hover {
-      &:after {
-        opacity: 1;
-      }
-    }
-  }
-
-
-  input.is-active + label,
-  input:checked + label {
-
-    &:after {
-      opacity: 1;
-    }
-  }
-
-  input:hover + label {
-    &:after {
-      opacity: 1;
-    }
-  }
-}
+//
+// .ratings {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//
+//
+//   input {
+//     @include visually-hidden;
+//   }
+//
+//   label {
+//     position: relative;
+//     z-index: 1;
+//     width: 36px;
+//     height: 36px;
+//     font-size: 0;
+//     text-indent: -9999px;
+//     margin: 8px;
+//
+//     &:hover {
+//       cursor: pointer;
+//     }
+//
+//     &:before,
+//     &:after {
+//       content: '';
+//       top: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//       display: block;
+//       position: absolute;
+//       transition: opacity 0.3s ease-in-out;
+//     }
+//
+//     &:before {
+//       z-index: 1;
+//       background: url('../img/svgs/star-outline.svg') center / cover no-repeat;
+//     }
+//
+//     &:after {
+//       opacity: 0;
+//       z-index: 2;
+//       background: url('../img/svgs/star.svg') center / cover no-repeat;
+//     }
+//
+//     &.is-hover {
+//       &:after {
+//         opacity: 1;
+//       }
+//     }
+//   }
+//
+//
+//   input.is-active + label,
+//   input:checked + label {
+//
+//     &:after {
+//       opacity: 1;
+//     }
+//   }
+//
+//   input:hover + label {
+//     &:after {
+//       opacity: 1;
+//     }
+//   }
+// }

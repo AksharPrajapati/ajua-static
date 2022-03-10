@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../../components/layout";
+import HeroBg from "../../common/images/marketing/hero-bg.jpeg";
 import ajuaBusinessGraphic from "../../common/images/marketing/ajua-business-graphic.png";
 import customers from "../../common/images/marketing/customers.png";
 import connect from "../../common/images/marketing/connect.png";
@@ -20,7 +21,7 @@ function ForBusiness() {
             <div className="d-md-flex mt-4">
               <a
                 className="btn btn--no-hover btn--white mr-4 mb-4 mb-md-0"
-                href="https://play.google.com/store/apps/details?id=com.mtn.gauge&hl=en_US&gl=US" target="_blank"
+                href="https://play.google.com/store/apps/details?id=com.mtn.gauge&hl=en_US&gl=US" target="_blank" rel="noopener"
               >
                 <i className="ri-android-fill" style={{ fontSize: "16px" }}></i>
                 <span>Download for Android</span>
@@ -31,6 +32,9 @@ function ForBusiness() {
             <img src={ajuaBusinessGraphic} alt="customers" />
           </figure>
         </div>
+        <figure>
+          <img src={HeroBg} alt="ajua gradient" />
+        </figure>
       </div>
 
       <div className="wrapper py-7">
@@ -50,7 +54,7 @@ function ForBusiness() {
                 ads to optimize and continue to find more customers and the
                 right ones.
               </p>
-              <a className="btn btn--no-hover mt-4" href="https://play.google.com/store/apps/details?id=com.mtn.gauge&hl=en_US&gl=US" target="_blank">
+              <a className="btn btn--no-hover mt-4" href="https://play.google.com/store/apps/details?id=com.mtn.gauge&hl=en_US&gl=US" target="_blank" rel="noopener">
                 <i className="ri-android-fill" style={{ fontSize: "16px" }}></i>
                 <span>Download for Android</span>
               </a>
@@ -76,7 +80,7 @@ function ForBusiness() {
                 reviews from your actual customers to build online credibility
                 and SEO.
               </p>
-              <a className="btn btn--no-hover mt-4" href="https://play.google.com/store/apps/details?id=com.mtn.gauge&hl=en_US&gl=US" target="_blank">
+              <a className="btn btn--no-hover mt-4" href="https://play.google.com/store/apps/details?id=com.mtn.gauge&hl=en_US&gl=US" target="_blank" rel="noopener">
                 <i className="ri-android-fill" style={{ fontSize: "16px" }}></i>
                 <span>Download for Android</span>
               </a>
@@ -102,7 +106,7 @@ function ForBusiness() {
                 chatbots and manage your entire customer service experience
                 without lifting a finger.
               </p>
-              <a className="btn btn--no-hover mt-4" href="https://play.google.com/store/apps/details?id=com.mtn.gauge&hl=en_US&gl=US" target="_blank">
+              <a className="btn btn--no-hover mt-4" href="https://play.google.com/store/apps/details?id=com.mtn.gauge&hl=en_US&gl=US" target="_blank" rel="noopener">
                 <i className="ri-android-fill" style={{ fontSize: "16px" }}></i>
                 <span>Download for Android</span>
               </a>
