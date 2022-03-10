@@ -91,7 +91,7 @@ function QuickSearch() {
           <div className="js-close-quick-search">Close</div>
         </div>
       </div>
-      <div class="quick-search-screen js-close-quick-search" onClick={CloseQuickSearch}></div>
+      <div className="quick-search-screen js-close-quick-search" onClick={CloseQuickSearch}></div>
     </div>
   );
 }
