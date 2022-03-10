@@ -85,7 +85,7 @@ function Header() {
         </nav>
       </div>
 
-      <div className="view-header-lg">
+      <div className="view-header-lg" id="view-header-lg">
         <div className="view-header-lg__inner">
           <div className="view-header-lg__left">
             <a className="site-logo" href="/">
