@@ -4,6 +4,13 @@ import { NavLink } from 'react-router-dom';
 import MobileNav from "./nav";
 
 function Header() {
+
+  const QuickSearch = function(e){
+    e.preventDefault();
+    document.body.classList.add('search-is-active');
+  }
+  
+
   return (
     <header className="site-header">
       <div className="view-header">
@@ -48,7 +55,7 @@ function Header() {
         </div>
 
         <div className="view-header__right">
-          <quick-search-trigger className="js-search">
+          <quick-search-trigger className="js-search" onClick={QuickSearch}>
             <i className="ri-search-2-line"></i>
           </quick-search-trigger>
         </div>
@@ -92,10 +99,11 @@ function Header() {
               <img src={logo} alt="Ajua" />
               <h2 className="sr-only">Ajua</h2>
             </a>
-            <form className="view-header-lg__search js-open-quick-search">
+            <form className="view-header-lg__search js-open-quick-search" onClick={QuickSearch}>
               <i className="ri-search-2-line"></i>
               <input
                 className="js-open-quick-search"
+                onClick={QuickSearch}
                 type="text"
                 placeholder="Start typing"
               />

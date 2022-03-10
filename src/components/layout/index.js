@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../footer";
 import Header from "../header";
+import QuickSearch from "../quicksearch";
 import AnimatedPage from "../../AnimatedPage";
 
 function Layout({ children }) {
@@ -10,6 +11,7 @@ function Layout({ children }) {
         <Header />
         {children}
         <Footer />
+        <QuickSearch />
       </AnimatedPage>
     </div>
   );
