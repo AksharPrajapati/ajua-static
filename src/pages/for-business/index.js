@@ -20,15 +20,11 @@ function ForBusiness() {
             <div className="d-md-flex mt-4">
               <a
                 className="btn btn--no-hover btn--white mr-4 mb-4 mb-md-0"
-                href="/"
+                href="https://play.google.com/store/apps/details?id=com.mtn.gauge&hl=en_US&gl=US" target="_blank"
               >
                 <i className="ri-android-fill" style={{ fontSize: "16px" }}></i>
                 <span>Download for Android</span>
               </a>
-              <div className="icon-link">
-                <span>Learn more</span>
-                <i className="ri-arrow-down-s-line"></i>
-              </div>
             </div>
           </div>
           <figure className="market-hero__img">
@@ -54,7 +50,7 @@ function ForBusiness() {
                 ads to optimize and continue to find more customers and the
                 right ones.
               </p>
-              <a className="btn btn--no-hover mt-4" href="/">
+              <a className="btn btn--no-hover mt-4" href="https://play.google.com/store/apps/details?id=com.mtn.gauge&hl=en_US&gl=US" target="_blank">
                 <i className="ri-android-fill" style={{ fontSize: "16px" }}></i>
                 <span>Download for Android</span>
               </a>
@@ -80,7 +76,7 @@ function ForBusiness() {
                 reviews from your actual customers to build online credibility
                 and SEO.
               </p>
-              <a className="btn btn--no-hover mt-4" href="/">
+              <a className="btn btn--no-hover mt-4" href="https://play.google.com/store/apps/details?id=com.mtn.gauge&hl=en_US&gl=US" target="_blank">
                 <i className="ri-android-fill" style={{ fontSize: "16px" }}></i>
                 <span>Download for Android</span>
               </a>
@@ -106,7 +102,7 @@ function ForBusiness() {
                 chatbots and manage your entire customer service experience
                 without lifting a finger.
               </p>
-              <a className="btn btn--no-hover mt-4" href="/">
+              <a className="btn btn--no-hover mt-4" href="https://play.google.com/store/apps/details?id=com.mtn.gauge&hl=en_US&gl=US" target="_blank">
                 <i className="ri-android-fill" style={{ fontSize: "16px" }}></i>
                 <span>Download for Android</span>
               </a>
