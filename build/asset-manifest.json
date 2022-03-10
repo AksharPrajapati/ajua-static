@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.68b31aa6.css",
+    "main.js": "/static/js/main.c8fe248e.js",
+    "static/js/787.27b2c263.chunk.js": "/static/js/787.27b2c263.chunk.js",
+    "static/media/connect.png": "/static/media/connect.b437731beeb55df7dbc9.png",
+    "static/media/ajua-hero.jpeg": "/static/media/ajua-hero.0aa27c3f802f158261d4.jpeg",
+    "static/media/grow.png": "/static/media/grow.01db9747fc9b29aef3d1.png",
+    "static/media/customers.png": "/static/media/customers.fa171cbf4545c83d706f.png",
+    "static/media/ajua-business-graphic.png": "/static/media/ajua-business-graphic.e6a5b6b395ce4462660e.png",
+    "static/media/local-business.png": "/static/media/local-business.9a0cc4173e84233dbac9.png",
+    "static/media/reviews.png": "/static/media/reviews.0e292db318abcc2380da.png",
+    "static/media/whatsapp.svg": "/static/media/whatsapp.f1ab4b1a432a2245457e51f91f52b82b.svg",
+    "static/media/Ajua-logo.svg": "/static/media/Ajua-logo.fbc353a4e0020c8296fbc6934c17c376.svg",
+    "static/media/Ajua-icon.svg": "/static/media/Ajua-icon.76b43fa2f4e6f7bebac878ea0fbd24c4.svg",
+    "index.html": "/index.html",
+    "static/media/check.svg": "/static/media/check.ad31556809467a892875.svg",
+    "main.68b31aa6.css.map": "/static/css/main.68b31aa6.css.map",
+    "main.c8fe248e.js.map": "/static/js/main.c8fe248e.js.map",
+    "787.27b2c263.chunk.js.map": "/static/js/787.27b2c263.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68b31aa6.css",
+    "static/js/main.c8fe248e.js"
+  ]
+}
