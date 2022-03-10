@@ -7,12 +7,12 @@ import AnimatedPage from "../../AnimatedPage";
 function Layout({ children }) {
   return (
     <div>
+      <Header />
       <AnimatedPage>
-        <Header />
-        {children}
-        <Footer />
-        <QuickSearch />
+      {children}
       </AnimatedPage>
+      <Footer />
+      <QuickSearch />
     </div>
   );
 }
