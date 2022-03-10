@@ -35,55 +35,55 @@ function QuickSearch() {
               <figure>
                 <img src="https://placeimg.com/480/480/tech" />
               </figure>
-              <p>[ Waiting on API ]</p>
+              <p>[ Waiting on API for search ]</p>
             </div>
 
             <div className="quick-search-result">
               <figure>
                 <img src="https://placeimg.com/480/480/tech" />
               </figure>
-              <p>[ Waiting on API ]</p>
+              <p>[ Waiting on API for search ]</p>
             </div>
 
             <div className="quick-search-result">
               <figure>
                 <img src="https://placeimg.com/480/480/tech" />
               </figure>
-              <p>[ Waiting on API ]</p>
+              <p>[ Waiting on API for search ]</p>
             </div>
 
             <div className="quick-search-result">
               <figure>
                 <img src="https://placeimg.com/480/480/tech" />
               </figure>
-              <p>[ Waiting on API ]</p>
+              <p>[ Waiting on API for search ]</p>
             </div>
             <div className="quick-search-result">
               <figure>
                 <img src="https://placeimg.com/480/480/tech" />
               </figure>
-              <p>[ Waiting on API ]</p>
-            </div>
-
-            <div className="quick-search-result">
-              <figure>
-                <img src="https://placeimg.com/480/480/tech" />
-              </figure>
-              <p>[ Waiting on API ]</p>
+              <p>[ Waiting on API for search ]</p>
             </div>
 
             <div className="quick-search-result">
               <figure>
                 <img src="https://placeimg.com/480/480/tech" />
               </figure>
-              <p>[ Waiting on API ]</p>
+              <p>[ Waiting on API for search ]</p>
             </div>
 
             <div className="quick-search-result">
               <figure>
                 <img src="https://placeimg.com/480/480/tech" />
               </figure>
-              <p>[ Waiting on API ]</p>
+              <p>[ Waiting on API for search ]</p>
+            </div>
+
+            <div className="quick-search-result">
+              <figure>
+                <img src="https://placeimg.com/480/480/tech" />
+              </figure>
+              <p>[ Waiting on API for search ]</p>
             </div>
           </div>
         </div>
