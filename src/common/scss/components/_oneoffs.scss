@@ -1,0 +1,50 @@
+// ---------------------------------------------------------------------
+//  One Offs
+// ---------------------------------------------------------------------
+
+.media-object {
+
+  @include start-at($large) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.media-object__media {
+
+  @include start-at($large) {
+    width: calc(50% - 24px);
+  }
+}
+
+.media-object__content {
+  padding: 24px 0 0;
+
+  @include start-at($large) {
+    width: calc(50% - 24px);
+    padding: 24px 0;
+  }
+}
+
+@include start-at($large) {
+  .media-object--flip {
+    .media-object__media {
+      order: 2;
+    }
+    .media-object__content {
+      order: 1;
+    }
+  }
+}
+
+
+// ----------------------------------------
+//
+// ----------------------------------------
+
+
+
+// ----------------------------------------
+//
+// ----------------------------------------
